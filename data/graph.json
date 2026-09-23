@@ -1,0 +1,289 @@
+{
+  "nodes": [
+    {
+      "id": "Guide",
+      "label": "Embodied-AI-Guide",
+      "group": "meta",
+      "status": "learning",
+      "desc": "课程本体（TianxingChen/Embodied-AI-Guide）"
+    },
+    {
+      "id": "Intel",
+      "label": "Intel 情报",
+      "group": "meta",
+      "status": "pushed",
+      "desc": "晨间情报沉淀入口"
+    },
+    {
+      "id": "A_Cognition",
+      "label": "A §1+§3 认知",
+      "group": "phase",
+      "status": "learning",
+      "desc": "立书架：领域地图与路线"
+    },
+    {
+      "id": "A1",
+      "label": "A1 董云龙四块",
+      "group": "day",
+      "status": "learning",
+      "desc": "§1+§3目录 + 董云龙基础技术路线",
+      "goal": "弄清具身智能是什么系统，以及董云龙路线里四块技术各自在解决什么问题。",
+      "points": [
+        "Embodied AI：环境理解→交互→推理→规划执行的物理世界系统",
+        "LLM as General Planner：自然语言意图→可调用规划代码（预置 API）",
+        "四块：场景理解｜数据引导｜动作执行｜World Model",
+        "场景理解：SAM／开放词表检测／Grounding → 物体／像素表示",
+        "数据引导：人类视频／UMI／遥操作／MimicGen·RoboGen 扩增",
+        "动作执行：ACT、Diffusion Policy；Affordance／LLM 规划纠错",
+        "World Model：动作后下一状态的想象，辅助操作",
+        "大脑／小脑失衡：语言决策快，灵巧控制仍短板"
+      ],
+      "links": [
+        {
+          "title": "董云龙：具身智能基础技术路线（Bilibili）",
+          "url": "https://www.bilibili.com/video/BV1d5ukedEsi"
+        },
+        {
+          "title": "具身智能基础技术路线-YunlongDong.pdf（Guide）",
+          "url": "https://raw.githubusercontent.com/TianxingChen/Embodied-AI-Guide/main/files/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80%E6%8A%80%E6%9C%AF%E8%B7%BA%E7%BA%BF-YunlongDong.pdf"
+        }
+      ],
+      "detail": "## A1 学习目标\n弄清具身智能是什么系统，以及董云龙路线里四块技术各自在解决什么问题。\n\n## 知识点\n1. **Embodied AI**：一套把环境理解、智能交互、认知推理、规划执行串在一起的系统，要在物理世界里感知并行动。\n2. **LLM as General Planner**：大模型靠常识和推理，把人的自然语言意图转成可调用的机器人规划代码（通过预置 API，如移动、抓取）。\n3. **基础技术四块**：场景理解｜数据引导｜动作执行｜世界模型。\n4. **场景理解**：用分割（如 SAM）、开放词表检测、多模态 Grounding，把「看到的场景」变成机器能用的物体／像素级表示。\n5. **数据引导**：策略要数据；来源包括人类视频模仿、轻量采集（如 UMI）、重型遥操作、生成式仿真扩增（如 MimicGen／RoboGen）。\n6. **动作执行**：把感知变成电机动作。常见路有生成式模仿学习（ACT、Diffusion Policy），以及基于 Affordance 或 LLM 规划／语言纠错来出动作。\n7. **World Model**：学的是在当前状态做某个动作之后，下一状态大概怎样，用来想象交互后果，再辅助操作。\n8. **大脑／小脑失衡**：语言决策侧进步快，灵巧运动控制侧仍短板。\n\n## 原始链接\n- 董云龙 Bilibili：https://www.bilibili.com/video/BV1d5ukedEsi\n- PDF（Guide）：https://raw.githubusercontent.com/TianxingChen/Embodied-AI-Guide/main/files/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80%E6%8A%80%E6%9C%AF%E8%B7%BA%E7%BA%BF-YunlongDong.pdf\n"
+    },
+    {
+      "id": "EmbodiedAI",
+      "label": "Embodied AI",
+      "group": "concept",
+      "status": "learning",
+      "desc": "具身智能系统整体",
+      "plain": "一套把环境理解、智能交互、认知推理、规划执行串在一起的系统，要在物理世界里感知并行动。"
+    },
+    {
+      "id": "LLMPlanner",
+      "label": "LLM as General Planner",
+      "group": "concept",
+      "status": "learning",
+      "desc": "大模型作通用规划器",
+      "plain": "大模型靠常识和推理，把人的自然语言意图转成可调用的机器人规划代码（通过预置 API，如移动、抓取）。"
+    },
+    {
+      "id": "SceneUnderstanding",
+      "label": "场景理解",
+      "group": "concept",
+      "status": "learning",
+      "desc": "四块之一：感知场景表示",
+      "plain": "用分割（如 SAM）、开放词表检测、多模态 Grounding，把「看到的场景」变成机器能用的物体／像素级表示。"
+    },
+    {
+      "id": "DataGuidance",
+      "label": "数据引导",
+      "group": "concept",
+      "status": "learning",
+      "desc": "四块之一：策略所需数据",
+      "plain": "策略要数据；来源包括人类视频模仿、轻量采集（如 UMI）、重型遥操作、生成式仿真扩增（如 MimicGen／RoboGen）。"
+    },
+    {
+      "id": "ActionExec",
+      "label": "动作执行",
+      "group": "concept",
+      "status": "learning",
+      "desc": "四块之一：感知→电机动作",
+      "plain": "把感知变成电机动作。常见路有生成式模仿学习（ACT、Diffusion Policy），以及基于 Affordance 或 LLM 规划／语言纠错来出动作。"
+    },
+    {
+      "id": "WorldModel",
+      "label": "World Model",
+      "group": "concept",
+      "status": "learning",
+      "desc": "四块之一：想象下一状态",
+      "plain": "学的是在当前状态做某个动作之后，下一状态大概怎样，用来想象交互后果，再辅助操作。"
+    },
+    {
+      "id": "BrainCerebellum",
+      "label": "大脑／小脑失衡",
+      "group": "concept",
+      "status": "pushed",
+      "desc": "决策 vs 灵巧控制差距",
+      "plain": "语言决策侧进步快，灵巧运动控制侧仍短板。"
+    },
+    {
+      "id": "Digest_20260923",
+      "label": "Digest 09-23",
+      "group": "digest",
+      "status": "pushed",
+      "desc": "AIHOT 晨间情报（未耗 X）",
+      "detail": "## Morning digest 2026-09-23（AIHOT；未耗 X）\n\nFull daily: https://aihot.news/daily/2026-09-23\n\n### General AI\n1. Claude Opus 5.5 ~40% cheaper than Opus 5\n2. GPT-6 Sol & Luna, API ~half price\n3. GPT-6 prompt cache / diagnostics\n4. Epoch AI cost −47%/quarter\n5. Maven AI / Pentagon review\n\n### Embodied\n1. CARE for VLA\n2. 徐梦迪 interview\n3. 小鹏 robot supply chain\n4. Toyota ~400k robots\n5. 自变量 IROS 2026\n",
+      "items": {
+        "general": [
+          {
+            "title": "Claude Opus 5.5 ~40% cheaper than Opus 5",
+            "url": "https://aihot.news/items/cmucwy58v0rskroedmv35n8ji"
+          },
+          {
+            "title": "GPT-6 Sol & Luna, API ~half price",
+            "url": "https://aihot.news/items/cmudnpv0k0hrrrogg9gcyun5n"
+          },
+          {
+            "title": "GPT-6 prompt cache / diagnostics",
+            "url": "https://aihot.news/items/cmud4mu5303n5roa915w7f1ja"
+          },
+          {
+            "title": "Epoch AI cost −47%/quarter",
+            "url": "https://aihot.news/items/cmud77i8r04yerorajpj343j2"
+          },
+          {
+            "title": "Maven AI / Pentagon review",
+            "url": "https://aihot.news/items/cmud57mjw02snrora28mvi2h0"
+          }
+        ],
+        "embodied": [
+          {
+            "title": "CARE for VLA",
+            "url": "https://aihot.news/items/cmucc8aul02q9roij58nn9iox"
+          },
+          {
+            "title": "徐梦迪 interview",
+            "url": "https://aihot.news/items/cmuce85qz050kroij8475d0k2"
+          },
+          {
+            "title": "小鹏 robot supply chain",
+            "url": "https://aihot.news/items/cmucesrlz038aroedc5kpjfk6"
+          },
+          {
+            "title": "Toyota ~400k robots",
+            "url": "https://aihot.news/items/cmuciykbx080yroed0b0j13eh"
+          },
+          {
+            "title": "自变量 IROS 2026",
+            "url": "https://aihot.news/items/cmudj9mjp0cwuroggknn74p04"
+          }
+        ]
+      },
+      "links": [
+        {
+          "title": "Full daily 2026-09-23",
+          "url": "https://aihot.news/daily/2026-09-23"
+        }
+      ],
+      "source": "AIHOT",
+      "xUsed": false
+    },
+    {
+      "id": "B_Algo",
+      "label": "B §4 算法",
+      "group": "phase",
+      "status": "parked",
+      "desc": "算法栈地图"
+    },
+    {
+      "id": "C_Infra",
+      "label": "C §5 基建",
+      "group": "phase",
+      "status": "parked",
+      "desc": "仿真/基准/数据"
+    },
+    {
+      "id": "D_Control",
+      "label": "D §6 控制",
+      "group": "phase",
+      "status": "parked",
+      "desc": "含开环/闭环（后置）"
+    },
+    {
+      "id": "E_Hardware",
+      "label": "E §7 硬件",
+      "group": "phase",
+      "status": "parked",
+      "desc": "传感器与本体"
+    },
+    {
+      "id": "F_HandsOn",
+      "label": "F §2 动手",
+      "group": "phase",
+      "status": "parked",
+      "desc": "RoboTwin 后置"
+    }
+  ],
+  "links": [
+    {
+      "source": "Guide",
+      "target": "A_Cognition",
+      "label": "先认知"
+    },
+    {
+      "source": "Guide",
+      "target": "Intel",
+      "label": "情报"
+    },
+    {
+      "source": "A_Cognition",
+      "target": "A1",
+      "label": "Day"
+    },
+    {
+      "source": "A1",
+      "target": "EmbodiedAI",
+      "label": "概念"
+    },
+    {
+      "source": "A1",
+      "target": "LLMPlanner",
+      "label": "概念"
+    },
+    {
+      "source": "A1",
+      "target": "SceneUnderstanding",
+      "label": "四块"
+    },
+    {
+      "source": "A1",
+      "target": "DataGuidance",
+      "label": "四块"
+    },
+    {
+      "source": "A1",
+      "target": "ActionExec",
+      "label": "四块"
+    },
+    {
+      "source": "A1",
+      "target": "WorldModel",
+      "label": "四块"
+    },
+    {
+      "source": "A1",
+      "target": "BrainCerebellum",
+      "label": "洞察"
+    },
+    {
+      "source": "Intel",
+      "target": "Digest_20260923",
+      "label": "今日"
+    },
+    {
+      "source": "A_Cognition",
+      "target": "B_Algo",
+      "label": "下一阶段"
+    },
+    {
+      "source": "B_Algo",
+      "target": "C_Infra",
+      "label": "下一阶段"
+    },
+    {
+      "source": "C_Infra",
+      "target": "D_Control",
+      "label": "下一阶段"
+    },
+    {
+      "source": "D_Control",
+      "target": "E_Hardware",
+      "label": "下一阶段"
+    },
+    {
+      "source": "E_Hardware",
+      "target": "F_HandsOn",
+      "label": "后置"
+    }
+  ]
+}

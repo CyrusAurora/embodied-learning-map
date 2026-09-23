@@ -1,0 +1,27 @@
+{
+  "updated_at": "2026-09-23",
+  "purpose": "Embodied AI / humanoid / Physical AI X watchlist for daily digest",
+  "notes": "X MCP has no follow-user write; tracking is via get_users_posts. SanctuaryAI handle was impersonator — excluded. Chinese OEMs (AgiBot/Galbot/Fourier) have weak/missing X presence — add when handles verified.",
+  "daily_budget_usd": 0.5,
+  "accounts": [
+    {"username": "Figure_robot", "id": "1602443956888817665", "name": "Figure", "tier": "company"},
+    {"username": "physical_int", "id": "1767285662087348224", "name": "Physical Intelligence", "tier": "company"},
+    {"username": "SkildAI", "id": "1664370972869398529", "name": "Skild AI", "tier": "company"},
+    {"username": "1x_tech", "id": "755183838532370432", "name": "1X", "tier": "company"},
+    {"username": "agilityrobotics", "id": "3216567403", "name": "Agility", "tier": "company"},
+    {"username": "BostonDynamics", "id": "517473207", "name": "Boston Dynamics", "tier": "company"},
+    {"username": "Apptronik", "id": "792359016592584704", "name": "Apptronik", "tier": "company"},
+    {"username": "UnitreeRobotics", "id": "907134826137788416", "name": "Unitree", "tier": "company"},
+    {"username": "LeRobotHF", "id": "1811128301764648960", "name": "LeRobot", "tier": "open_source"},
+    {"username": "CovariantAI", "id": "1060953957248290821", "name": "Covariant", "tier": "company"},
+    {"username": "ToyotaResearch", "id": "724965688935329792", "name": "Toyota Research Institute", "tier": "company"},
+    {"username": "DrJimFan", "id": "1007413134", "name": "Jim Fan", "tier": "person"},
+    {"username": "chelseabfinn", "id": "2577596593", "name": "Chelsea Finn", "tier": "person"},
+    {"username": "svlevine", "id": "990433714948661250", "name": "Sergey Levine", "tier": "person"},
+    {"username": "chris_j_paxton", "id": "2244121213", "name": "Chris Paxton", "tier": "person"},
+    {"username": "NVIDIAAI", "id": "740238495952736256", "name": "NVIDIA AI", "tier": "lab", "filter": "robotics/embodied only"},
+    {"username": "GoogleDeepMind", "id": "4783690002", "name": "Google DeepMind", "tier": "lab", "filter": "robotics/embodied only"},
+    {"username": "AIatMeta", "id": "1034844617261248512", "name": "AI at Meta", "tier": "lab", "filter": "robotics/embodied only"}
+  ],
+  "last_seen": {}
+}

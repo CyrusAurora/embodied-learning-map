@@ -1,0 +1,7 @@
+# progress-log
+- 2026-09-23 下午：用户纠偏——整体认知未立就钻开环/闭环。对齐 Embodied-AI-Guide：主枝改 FieldMap；Control/开环/闭环 parked；今日三连改 Guide§1+§3 + 董云龙路线 + 许华哲2025回望。
+- 2026-09-23 上午：开环/闭环 stuck→降密度包（已废止为当日主推）。
+- 2026-09-23：用户锁定——只用 Guide 材料；助手=排期+引导+监督。课表见 guide-curriculum.md；当前 A1。
+
+- 2026-09-23 14:36：用户要求立即执行今日日报+学习。已交付 A1 三连（董云龙四块）+ 晨间情报双轨样报（AIHOT；具身多为 mode=all；未耗 X）。节点仍 A1 learning；等反馈。
+- 2026-09-23 14:50：用户确认 A1+情报可用；已沉淀进 learning-map 站点（graph 概念节点 + data/daily/2026-09-23.json）。A1 仍 learning，等四块偏好反馈。

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cyrus Learning Map · Embodied AI</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; font-family: "Noto Sans SC", "PingFang SC", system-ui, sans-serif; background: #0d1117; color: #e6edf3; }
+  #graph { position: absolute; inset: 0; }
+  .panel {
+    position: absolute; top: 16px; left: 16px; z-index: 10;
+    width: min(400px, 92vw); min-width: 360px; max-width: 92vw;
+    background: rgba(22,27,34,.92); border: 1px solid #30363d;
+    border-radius: 12px; padding: 14px 16px; backdrop-filter: blur(8px);
+    box-shadow: 0 8px 32px rgba(0,0,0,.4);
+  }
+  .panel h1 { margin: 0 0 4px; font-size: 16px; font-weight: 700; }
+  .panel .sub { font-size: 12px; color: #8b949e; margin-bottom: 10px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px; font-size: 11px; margin-bottom: 10px; }
+  .legend span { display: inline-flex; align-items: center; gap: 5px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+  #dailyList {
+    border-top: 1px solid #30363d; padding-top: 8px; margin-bottom: 8px;
+    font-size: 12px;
+  }
+  #dailyList .dl-title { color: #8b949e; margin-bottom: 4px; font-size: 11px; }
+  #dailyList button {
+    display: block; width: 100%; text-align: left;
+    background: transparent; border: 1px solid #30363d; color: #58a6ff;
+    border-radius: 6px; padding: 6px 8px; margin: 4px 0; cursor: pointer;
+    font-size: 12px;
+  }
+  #dailyList button:hover { border-color: #58a6ff; background: rgba(88,166,255,.08); }
+  #detail {
+    border-top: 1px solid #30363d; padding-top: 10px; font-size: 13px; line-height: 1.55;
+    min-height: 72px; max-height: 55vh; overflow: auto; color: #c9d1d9;
+  }
+  #detail strong { color: #58a6ff; }
+  #detail a { color: #58a6ff; text-decoration: none; }
+  #detail a:hover { text-decoration: underline; }
+  #detail ul { margin: 6px 0 8px 18px; padding: 0; }
+  #detail li { margin: 3px 0; }
+  #detail code { background: #21262d; padding: 1px 5px; border-radius: 4px; font-size: 12px; }
+  #detail .sec { margin-top: 8px; font-size: 11px; color: #8b949e; text-transform: uppercase; letter-spacing: .04em; }
+  #detail .plain { color: #8b949e; font-size: 12px; margin-top: 2px; }
+  #detail pre.detail-md {
+    white-space: pre-wrap; word-break: break-word;
+    font-family: inherit; font-size: 12px; color: #c9d1d9;
+    background: #161b22; border: 1px solid #30363d; border-radius: 6px;
+    padding: 8px; margin: 6px 0; max-height: 28vh; overflow: auto;
+  }
+  .hint { margin-top: 8px; font-size: 11px; color: #6e7681; }
+  @media (max-width: 420px) {
+    .panel { min-width: 0; width: calc(100vw - 24px); }
+  }
+</style>
+</head>
+<body>
+  <div class="panel">
+    <h1>Learning Map</h1>
+    <div class="sub">Month1 · Path3 · A1 · Guide</div>
+    <div class="legend">
+      <span><i class="dot" style="background:#3fb950"></i>done</span>
+      <span><i class="dot" style="background:#d29922"></i>learning</span>
+      <span><i class="dot" style="background:#58a6ff"></i>pushed</span>
+      <span><i class="dot" style="background:#6e7681"></i>parked</span>
+    </div>
+    <div id="dailyList">
+      <div class="dl-title">今日沉淀</div>
+      <div id="dailyButtons">加载中…</div>
+    </div>
+    <div id="detail">点击节点查看目标、知识点与链接。</div>
+    <div class="hint">拖拽 · 滚轮缩放 · 需 python -m http.server</div>
+  </div>
+  <div id="graph"></div>
+
+  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/3d-force-graph@1.73.3/dist/3d-force-graph.min.js"></script>
+  <script>
+    const STATUS_COLOR = {
+      done: '#3fb950',
+      learning: '#d29922',
+      pushed: '#58a6ff',
+      parked: '#6e7681'
+    };
+
+    const detail = document.getElementById('detail');
+
+    function esc(s) {
+      return String(s == null ? '' : s)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    function renderLinks(links) {
+      if (!links || !links.length) return '';
+      const items = links.map(l => {
+        if (typeof l === 'string') {
+          return `<li><a href="${esc(l)}" target="_blank" rel="noopener">${esc(l)}</a></li>`;
+        }
+        const url = l.url || '';
+        const title = l.title || url;
+        return `<li><a href="${esc(url)}" target="_blank" rel="noopener">${esc(title)}</a></li>`;
+      }).join('');
+      return `<div class="sec">Links</div><ul>${items}</ul>`;
+    }
+
+    function renderPoints(points) {
+      if (!points || !points.length) return '';
+      const items = points.map(p => {
+        if (typeof p === 'string') return `<li>${esc(p)}</li>`;
+        const term = p.term || '';
+        const plain = p.plain || '';
+        return `<li><strong>${esc(term)}</strong>${plain ? `<div class="plain">${esc(plain)}</div>` : ''}</li>`;
+      }).join('');
+      return `<div class="sec">知识点</div><ul>${items}</ul>`;
+    }
+
+    function renderDigestItems(items) {
+      if (!items) return '';
+      let html = '';
+      if (items.general && items.general.length) {
+        html += `<div class="sec">General AI</div><ul>` +
+          items.general.map(it =>
+            `<li><a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.title)}</a></li>`
+          ).join('') + `</ul>`;
+      }
+      if (items.embodied && items.embodied.length) {
+        html += `<div class="sec">Embodied</div><ul>` +
+          items.embodied.map(it =>
+            `<li><a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.title)}</a></li>`
+          ).join('') + `</ul>`;
+      }
+      return html;
+    }
+
+    function renderNode(node) {
+      let html =
+        `<strong>${esc(node.label)}</strong><br/>` +
+        `status: <code>${esc(node.status)}</code>` +
+        (node.group ? ` · group: <code>${esc(node.group)}</code>` : '') +
+        `<br/>描述对象：${esc(node.desc || '—')}`;
+
+      if (node.goal) {
+        html += `<div class="sec">今日目标</div><div>${esc(node.goal)}</div>`;
+      }
+      if (node.plain) {
+        html += `<div class="sec">白话</div><div>${esc(node.plain)}</div>`;
+      }
+      html += renderPoints(node.points);
+      html += renderDigestItems(node.items);
+      html += renderLinks(node.links);
+
+      if (node.detail) {
+        html += `<div class="sec">Detail</div><pre class="detail-md">${esc(node.detail)}</pre>`;
+      }
+      return html;
+    }
+
+    function renderDailyPack(pack) {
+      let html =
+        `<strong>沉淀 ${esc(pack.date)}</strong><br/>` +
+        `source: <code>${esc((pack.digest && pack.digest.source) || '—')}</code>`;
+
+      if (pack.learning) {
+        const L = pack.learning;
+        html += `<div class="sec">Learning ${esc(L.id || '')}</div>`;
+        if (L.goal) html += `<div>${esc(L.goal)}</div>`;
+        html += renderPoints(L.points);
+        html += renderLinks(L.links);
+      }
+      if (pack.digest) {
+        const D = pack.digest;
+        if (D.dailyUrl) {
+          html += `<div class="sec">Digest</div><div><a href="${esc(D.dailyUrl)}" target="_blank" rel="noopener">Full daily</a>` +
+            (D.xUsed === false ? ` · xUsed: false` : '') + `</div>`;
+        }
+        html += renderDigestItems({ general: D.general, embodied: D.embodied });
+      }
+      detail.innerHTML = html;
+    }
+
+    function loadDailyIndex() {
+      const box = document.getElementById('dailyButtons');
+      fetch('data/daily/index.json')
+        .then(r => {
+          if (!r.ok) throw new Error('daily index ' + r.status);
+          return r.json();
+        })
+        .then(idx => {
+          const dates = idx.dates || [];
+          if (!dates.length) {
+            box.textContent = '暂无沉淀';
+            return;
+          }
+          box.innerHTML = '';
+          dates.forEach(d => {
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.textContent = `${d.date}${d.label ? ' · ' + d.label : ''}`;
+            btn.addEventListener('click', () => {
+              fetch('data/daily/' + (d.file || (d.date + '.json')))
+                .then(r => {
+                  if (!r.ok) throw new Error('daily ' + r.status);
+                  return r.json();
+                })
+                .then(renderDailyPack)
+                .catch(err => { detail.innerHTML = '加载失败：' + esc(err.message); });
+            });
+            box.appendChild(btn);
+          });
+        })
+        .catch(() => { box.textContent = '无 daily index'; });
+    }
+
+    loadDailyIndex();
+
+    fetch('data/graph.json')
+      .then(r => {
+        if (!r.ok) throw new Error('graph.json HTTP ' + r.status);
+        return r.json();
+      })
+      .then(raw => {
+        const data = {
+          nodes: raw.nodes.map(n => ({ ...n })),
+          links: raw.links.map(l => ({ ...l }))
+        };
+
+        const Graph = ForceGraph3D()(document.getElementById('graph'))
+          .graphData(data)
+          .backgroundColor('#0d1117')
+          .nodeId('id')
+          .nodeLabel(n => `${n.label}\n[${n.status}]`)
+          .nodeVal(n => {
+            if (n.status === 'learning') return 8;
+            if (n.group === 'concept' || n.group === 'digest') return 4;
+            return 5;
+          })
+          .nodeColor(n => STATUS_COLOR[n.status] || '#8b949e')
+          .nodeOpacity(0.95)
+          .linkColor(() => '#484f58')
+          .linkOpacity(0.6)
+          .linkWidth(1.2)
+          .linkDirectionalArrowLength(3.5)
+          .linkDirectionalArrowRelPos(1)
+          .linkThreeObjectExtend(true)
+          .linkThreeObject(link => {
+            const group = new THREE.Group();
+            const canvas = document.createElement('canvas');
+            canvas.width = 256; canvas.height = 64;
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = 'rgba(0,0,0,0)';
+            ctx.fillRect(0, 0, 256, 64);
+            ctx.font = '20px sans-serif';
+            ctx.fillStyle = '#8b949e';
+            ctx.textAlign = 'center';
+            ctx.fillText(link.label || '', 128, 36);
+            const tex = new THREE.CanvasTexture(canvas);
+            const mat = new THREE.SpriteMaterial({ map: tex, depthWrite: false });
+            const sprite = new THREE.Sprite(mat);
+            sprite.scale.set(18, 4.5, 1);
+            group.add(sprite);
+            return group;
+          })
+          .linkPositionUpdate((obj, { start, end }) => {
+            const mid = Object.assign({}, start);
+            mid.x = (start.x + end.x) / 2;
+            mid.y = (start.y + end.y) / 2;
+            mid.z = (start.z + end.z) / 2;
+            Object.assign(obj.position, mid);
+          })
+          .nodeThreeObject(node => {
+            const canvas = document.createElement('canvas');
+            canvas.width = 360; canvas.height = 80;
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = 'rgba(13,17,23,0.75)';
+            ctx.fillRect(0, 8, 360, 64);
+            ctx.strokeStyle = STATUS_COLOR[node.status] || '#8b949e';
+            ctx.lineWidth = 3;
+            ctx.strokeRect(0, 8, 360, 64);
+            ctx.fillStyle = '#e6edf3';
+            ctx.font = 'bold 20px sans-serif';
+            ctx.textAlign = 'center';
+            const label = node.label.length > 22 ? node.label.slice(0, 21) + '…' : node.label;
+            ctx.fillText(label, 180, 48);
+            const tex = new THREE.CanvasTexture(canvas);
+            const sprite = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, depthWrite: false }));
+            sprite.scale.set(30, 7, 1);
+            return sprite;
+          })
+          .nodeThreeObjectExtend(true)
+          .onNodeClick(node => {
+            detail.innerHTML = renderNode(node);
+          });
+
+        Graph.d3Force('charge').strength(-220);
+        Graph.d3Force('link').distance(l => {
+          const t = typeof l.target === 'object' ? l.target.group : null;
+          if (t === 'concept' || t === 'digest') return 70;
+          return 100;
+        });
+
+        setTimeout(() => {
+          const dist = 360;
+          Graph.cameraPosition({ x: 0, y: 0, z: dist }, { x: 0, y: 0, z: 0 }, 800);
+        }, 400);
+      })
+      .catch(err => {
+        detail.innerHTML = '加载失败：' + esc(err.message) + '<br/>请用 python -m http.server 打开本目录。';
+      });
+  </script>
+</body>
+</html>
