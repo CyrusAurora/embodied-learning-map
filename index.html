@@ -4,88 +4,352 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Cyrus Learning Map · Embodied AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
-  html, body { margin: 0; height: 100%; overflow: hidden; font-family: "Noto Sans SC", "PingFang SC", system-ui, sans-serif; background: #0d1117; color: #e6edf3; }
-  #graph { position: absolute; inset: 0; }
+  :root {
+    --bg-deep: #05060d;
+    --glass: rgba(12, 14, 24, 0.55);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --text: #e8ecf4;
+    --muted: #8b93a7;
+    --accent: #7eb6ff;
+    --done: #3fb950;
+    --learning: #e3b341;
+    --pushed: #6ba4ff;
+    --parked: #6e7681;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: Inter, "Noto Sans SC", "PingFang SC", system-ui, -apple-system, sans-serif;
+    background: var(--bg-deep);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #stars {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 80% 55% at 18% 22%, rgba(72, 48, 140, 0.28), transparent 55%),
+      radial-gradient(ellipse 70% 50% at 82% 68%, rgba(40, 70, 160, 0.22), transparent 50%),
+      radial-gradient(ellipse 60% 40% at 50% 100%, rgba(90, 40, 120, 0.18), transparent 45%),
+      radial-gradient(ellipse 100% 80% at 50% 40%, #0a0b14 0%, #05060d 70%);
+  }
+
+  #graph {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: transparent !important;
+  }
+
+  #graph canvas {
+    background: transparent !important;
+    outline: none;
+  }
+
   .panel {
-    position: absolute; top: 16px; left: 16px; z-index: 10;
-    width: min(400px, 92vw); min-width: 360px; max-width: 92vw;
-    background: rgba(22,27,34,.92); border: 1px solid #30363d;
-    border-radius: 12px; padding: 14px 16px; backdrop-filter: blur(8px);
-    box-shadow: 0 8px 32px rgba(0,0,0,.4);
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    z-index: 10;
+    width: min(380px, 92vw);
+    min-width: 320px;
+    max-width: 92vw;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 16px 18px 14px;
+    backdrop-filter: blur(20px) saturate(1.2);
+    -webkit-backdrop-filter: blur(20px) saturate(1.2);
+    box-shadow:
+      0 4px 24px rgba(0, 0, 0, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
   }
-  .panel h1 { margin: 0 0 4px; font-size: 16px; font-weight: 700; }
-  .panel .sub { font-size: 12px; color: #8b949e; margin-bottom: 10px; }
-  .legend { display: flex; flex-wrap: wrap; gap: 8px; font-size: 11px; margin-bottom: 10px; }
-  .legend span { display: inline-flex; align-items: center; gap: 5px; }
-  .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+
+  .panel h1 {
+    margin: 0 0 2px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: #f0f3fa;
+  }
+
+  .panel .sub {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 12px;
+    letter-spacing: 0.04em;
+    font-weight: 500;
+  }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 11px;
+    margin-bottom: 12px;
+  }
+
+  .legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 9px 3px 7px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #a8b0c4;
+    font-weight: 500;
+  }
+
+  .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 6px currentColor;
+  }
+
   #dailyList {
-    border-top: 1px solid #30363d; padding-top: 8px; margin-bottom: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 10px;
+    margin-bottom: 8px;
     font-size: 12px;
   }
-  #dailyList .dl-title { color: #8b949e; margin-bottom: 4px; font-size: 11px; }
+
+  #dailyList .dl-title {
+    color: var(--muted);
+    margin-bottom: 6px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+  }
+
   #dailyList button {
-    display: block; width: 100%; text-align: left;
-    background: transparent; border: 1px solid #30363d; color: #58a6ff;
-    border-radius: 6px; padding: 6px 8px; margin: 4px 0; cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    color: var(--accent);
+    border-radius: 8px;
+    padding: 7px 10px;
+    margin: 4px 0;
+    cursor: pointer;
     font-size: 12px;
+    font-family: inherit;
+    transition: border-color 0.15s, background 0.15s;
   }
-  #dailyList button:hover { border-color: #58a6ff; background: rgba(88,166,255,.08); }
+
+  #dailyList button:hover {
+    border-color: rgba(126, 182, 255, 0.45);
+    background: rgba(126, 182, 255, 0.08);
+  }
+
   #detail {
-    border-top: 1px solid #30363d; padding-top: 10px; font-size: 13px; line-height: 1.55;
-    min-height: 72px; max-height: 55vh; overflow: auto; color: #c9d1d9;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 10px;
+    font-size: 13px;
+    line-height: 1.55;
+    min-height: 72px;
+    max-height: 55vh;
+    overflow: auto;
+    color: #c4cad8;
   }
-  #detail strong { color: #58a6ff; }
-  #detail a { color: #58a6ff; text-decoration: none; }
+
+  #detail strong { color: var(--accent); font-weight: 600; }
+  #detail a { color: var(--accent); text-decoration: none; }
   #detail a:hover { text-decoration: underline; }
   #detail ul { margin: 6px 0 8px 18px; padding: 0; }
   #detail li { margin: 3px 0; }
-  #detail code { background: #21262d; padding: 1px 5px; border-radius: 4px; font-size: 12px; }
-  #detail .sec { margin-top: 8px; font-size: 11px; color: #8b949e; text-transform: uppercase; letter-spacing: .04em; }
-  #detail .plain { color: #8b949e; font-size: 12px; margin-top: 2px; }
-  #detail pre.detail-md {
-    white-space: pre-wrap; word-break: break-word;
-    font-family: inherit; font-size: 12px; color: #c9d1d9;
-    background: #161b22; border: 1px solid #30363d; border-radius: 6px;
-    padding: 8px; margin: 6px 0; max-height: 28vh; overflow: auto;
+
+  #detail code {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 11px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
   }
-  .hint { margin-top: 8px; font-size: 11px; color: #6e7681; }
+
+  #detail .sec {
+    margin-top: 10px;
+    font-size: 10px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+  }
+
+  #detail .plain { color: var(--muted); font-size: 12px; margin-top: 2px; }
+
+  #detail pre.detail-md {
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: inherit;
+    font-size: 12px;
+    color: #c4cad8;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin: 6px 0;
+    max-height: 28vh;
+    overflow: auto;
+  }
+
+  .hint {
+    margin-top: 10px;
+    font-size: 10px;
+    color: #5c6478;
+    letter-spacing: 0.02em;
+  }
+
   @media (max-width: 420px) {
     .panel { min-width: 0; width: calc(100vw - 24px); }
   }
 </style>
 </head>
 <body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div id="graph"></div>
   <div class="panel">
     <h1>Learning Map</h1>
-    <div class="sub">Month1 · Path3 · A1 · Guide</div>
+    <div class="sub">Embodied · Guide · A1</div>
     <div class="legend">
-      <span><i class="dot" style="background:#3fb950"></i>done</span>
-      <span><i class="dot" style="background:#d29922"></i>learning</span>
-      <span><i class="dot" style="background:#58a6ff"></i>pushed</span>
-      <span><i class="dot" style="background:#6e7681"></i>parked</span>
+      <span><i class="dot" style="background:#3fb950;color:#3fb950"></i>done</span>
+      <span><i class="dot" style="background:#e3b341;color:#e3b341"></i>learning</span>
+      <span><i class="dot" style="background:#6ba4ff;color:#6ba4ff"></i>pushed</span>
+      <span><i class="dot" style="background:#6e7681;color:#6e7681"></i>parked</span>
     </div>
     <div id="dailyList">
       <div class="dl-title">今日沉淀</div>
       <div id="dailyButtons">加载中…</div>
     </div>
     <div id="detail">点击节点查看目标、知识点与链接。</div>
-    <div class="hint">拖拽 · 滚轮缩放 · 需 python -m http.server</div>
+    <div class="hint">拖拽旋转 · 滚轮缩放</div>
   </div>
-  <div id="graph"></div>
 
   <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
   <script src="https://unpkg.com/3d-force-graph@1.73.3/dist/3d-force-graph.min.js"></script>
   <script>
     const STATUS_COLOR = {
       done: '#3fb950',
-      learning: '#d29922',
-      pushed: '#58a6ff',
+      learning: '#e3b341',
+      pushed: '#6ba4ff',
       parked: '#6e7681'
     };
 
     const detail = document.getElementById('detail');
 
+    /* ── Starfield with parallax layers ── */
+    const starsCanvas = document.getElementById('stars');
+    const sctx = starsCanvas.getContext('2d');
+    const starLayers = [
+      { count: 90,  size: [0.4, 1.0], opacity: [0.15, 0.35], speed: 0.15, parallax: 0.012 },
+      { count: 55,  size: [0.7, 1.6], opacity: [0.25, 0.55], speed: 0.28, parallax: 0.028 },
+      { count: 28,  size: [1.0, 2.2], opacity: [0.40, 0.85], speed: 0.45, parallax: 0.055 }
+    ];
+    let stars = [];
+    let parallaxX = 0, parallaxY = 0;
+    let targetParallaxX = 0, targetParallaxY = 0;
+    let idleT = 0;
+    let graphRef = null;
+
+    function seedStars() {
+      const w = starsCanvas.width;
+      const h = starsCanvas.height;
+      stars = [];
+      starLayers.forEach((layer, li) => {
+        for (let i = 0; i < layer.count; i++) {
+          stars.push({
+            layer: li,
+            x: Math.random() * w,
+            y: Math.random() * h,
+            r: layer.size[0] + Math.random() * (layer.size[1] - layer.size[0]),
+            a: layer.opacity[0] + Math.random() * (layer.opacity[1] - layer.opacity[0]),
+            tw: Math.random() * Math.PI * 2,
+            twSpeed: 0.4 + Math.random() * 0.8
+          });
+        }
+      });
+    }
+
+    function resizeStars() {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      starsCanvas.width = Math.floor(w * dpr);
+      starsCanvas.height = Math.floor(h * dpr);
+      starsCanvas.style.width = w + 'px';
+      starsCanvas.style.height = h + 'px';
+      sctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      seedStars();
+    }
+
+    function drawStars(dt) {
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      sctx.clearRect(0, 0, w, h);
+
+      idleT += dt;
+      const idleX = Math.sin(idleT * 0.08) * 8;
+      const idleY = Math.cos(idleT * 0.06) * 5;
+
+      parallaxX += (targetParallaxX - parallaxX) * Math.min(1, dt * 4);
+      parallaxY += (targetParallaxY - parallaxY) * Math.min(1, dt * 4);
+
+      for (let i = 0; i < stars.length; i++) {
+        const s = stars[i];
+        const L = starLayers[s.layer];
+        const ox = (parallaxX + idleX) * L.parallax * 100;
+        const oy = (parallaxY + idleY) * L.parallax * 100;
+        let x = ((s.x + ox) % w + w) % w;
+        let y = ((s.y + oy) % h + h) % h;
+        const twinkle = 0.7 + 0.3 * Math.sin(idleT * s.twSpeed + s.tw);
+        sctx.beginPath();
+        sctx.arc(x, y, s.r, 0, Math.PI * 2);
+        sctx.fillStyle = `rgba(220, 230, 255, ${s.a * twinkle})`;
+        sctx.fill();
+      }
+    }
+
+    let lastTs = performance.now();
+    function starLoop(ts) {
+      const dt = Math.min(0.05, (ts - lastTs) / 1000);
+      lastTs = ts;
+
+      if (graphRef) {
+        try {
+          const cam = graphRef.camera();
+          if (cam) {
+            const sx = cam.position.x;
+            const sy = cam.position.y;
+            targetParallaxX = sx * 0.004;
+            targetParallaxY = -sy * 0.004;
+          }
+        } catch (_) {}
+      }
+
+      drawStars(dt);
+      requestAnimationFrame(starLoop);
+    }
+
+    resizeStars();
+    window.addEventListener('resize', resizeStars);
+    requestAnimationFrame(starLoop);
+
+    /* ── Detail rendering (unchanged API) ── */
     function esc(s) {
       return String(s == null ? '' : s)
         .replace(/&/g, '&amp;').replace(/</g, '&lt;')
@@ -215,6 +479,56 @@
 
     loadDailyIndex();
 
+    function makeLabelSprite(node) {
+      const canvas = document.createElement('canvas');
+      const dpr = 2;
+      canvas.width = 320 * dpr;
+      canvas.height = 56 * dpr;
+      const ctx = canvas.getContext('2d');
+      ctx.scale(dpr, dpr);
+
+      const w = 320, h = 56;
+      const r = 12;
+      const color = STATUS_COLOR[node.status] || '#6e7681';
+
+      ctx.beginPath();
+      ctx.moveTo(r, 4);
+      ctx.lineTo(w - r, 4);
+      ctx.quadraticCurveTo(w - 4, 4, w - 4, r);
+      ctx.lineTo(w - 4, h - r);
+      ctx.quadraticCurveTo(w - 4, h - 4, w - r, h - 4);
+      ctx.lineTo(r, h - 4);
+      ctx.quadraticCurveTo(4, h - 4, 4, h - r);
+      ctx.lineTo(4, r);
+      ctx.quadraticCurveTo(4, 4, r, 4);
+      ctx.closePath();
+
+      ctx.fillStyle = 'rgba(10, 12, 22, 0.72)';
+      ctx.fill();
+      ctx.strokeStyle = color;
+      ctx.globalAlpha = 0.55;
+      ctx.lineWidth = 1.25;
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+
+      ctx.fillStyle = 'rgba(232, 236, 244, 0.95)';
+      ctx.font = '500 15px Inter, "Noto Sans SC", system-ui, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      const label = node.label.length > 24 ? node.label.slice(0, 23) + '…' : node.label;
+      ctx.fillText(label, w / 2, h / 2);
+
+      const tex = new THREE.CanvasTexture(canvas);
+      tex.needsUpdate = true;
+      const sprite = new THREE.Sprite(new THREE.SpriteMaterial({
+        map: tex,
+        depthWrite: false,
+        transparent: true
+      }));
+      sprite.scale.set(26, 4.55, 1);
+      return sprite;
+    }
+
     fetch('data/graph.json')
       .then(r => {
         if (!r.ok) throw new Error('graph.json HTTP ' + r.status);
@@ -226,9 +540,12 @@
           links: raw.links.map(l => ({ ...l }))
         };
 
-        const Graph = ForceGraph3D()(document.getElementById('graph'))
+        const Graph = ForceGraph3D({
+          rendererConfig: { alpha: true, antialias: true }
+        })(document.getElementById('graph'))
           .graphData(data)
-          .backgroundColor('#0d1117')
+          .backgroundColor('rgba(0,0,0,0)')
+          .showNavInfo(false)
           .nodeId('id')
           .nodeLabel(n => `${n.label}\n[${n.status}]`)
           .nodeVal(n => {
@@ -237,28 +554,30 @@
             return 5;
           })
           .nodeColor(n => STATUS_COLOR[n.status] || '#8b949e')
-          .nodeOpacity(0.95)
-          .linkColor(() => '#484f58')
-          .linkOpacity(0.6)
-          .linkWidth(1.2)
-          .linkDirectionalArrowLength(3.5)
+          .nodeOpacity(0.92)
+          .linkColor(() => 'rgba(160, 180, 220, 0.28)')
+          .linkOpacity(0.55)
+          .linkWidth(0.9)
+          .linkDirectionalArrowLength(2.8)
           .linkDirectionalArrowRelPos(1)
+          .linkDirectionalArrowColor(() => 'rgba(160, 180, 220, 0.4)')
           .linkThreeObjectExtend(true)
           .linkThreeObject(link => {
             const group = new THREE.Group();
+            if (!link.label) return group;
             const canvas = document.createElement('canvas');
-            canvas.width = 256; canvas.height = 64;
+            canvas.width = 256; canvas.height = 48;
             const ctx = canvas.getContext('2d');
-            ctx.fillStyle = 'rgba(0,0,0,0)';
-            ctx.fillRect(0, 0, 256, 64);
-            ctx.font = '20px sans-serif';
-            ctx.fillStyle = '#8b949e';
+            ctx.clearRect(0, 0, 256, 48);
+            ctx.font = '500 16px Inter, system-ui, sans-serif';
+            ctx.fillStyle = 'rgba(170, 185, 210, 0.55)';
             ctx.textAlign = 'center';
-            ctx.fillText(link.label || '', 128, 36);
+            ctx.textBaseline = 'middle';
+            ctx.fillText(link.label || '', 128, 24);
             const tex = new THREE.CanvasTexture(canvas);
-            const mat = new THREE.SpriteMaterial({ map: tex, depthWrite: false });
+            const mat = new THREE.SpriteMaterial({ map: tex, depthWrite: false, transparent: true });
             const sprite = new THREE.Sprite(mat);
-            sprite.scale.set(18, 4.5, 1);
+            sprite.scale.set(16, 3, 1);
             group.add(sprite);
             return group;
           })
@@ -269,25 +588,7 @@
             mid.z = (start.z + end.z) / 2;
             Object.assign(obj.position, mid);
           })
-          .nodeThreeObject(node => {
-            const canvas = document.createElement('canvas');
-            canvas.width = 360; canvas.height = 80;
-            const ctx = canvas.getContext('2d');
-            ctx.fillStyle = 'rgba(13,17,23,0.75)';
-            ctx.fillRect(0, 8, 360, 64);
-            ctx.strokeStyle = STATUS_COLOR[node.status] || '#8b949e';
-            ctx.lineWidth = 3;
-            ctx.strokeRect(0, 8, 360, 64);
-            ctx.fillStyle = '#e6edf3';
-            ctx.font = 'bold 20px sans-serif';
-            ctx.textAlign = 'center';
-            const label = node.label.length > 22 ? node.label.slice(0, 21) + '…' : node.label;
-            ctx.fillText(label, 180, 48);
-            const tex = new THREE.CanvasTexture(canvas);
-            const sprite = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, depthWrite: false }));
-            sprite.scale.set(30, 7, 1);
-            return sprite;
-          })
+          .nodeThreeObject(node => makeLabelSprite(node))
           .nodeThreeObjectExtend(true)
           .onNodeClick(node => {
             detail.innerHTML = renderNode(node);
@@ -300,13 +601,22 @@
           return 100;
         });
 
+        graphRef = Graph;
+
+        try {
+          const renderer = Graph.renderer();
+          if (renderer) {
+            renderer.setClearColor(0x000000, 0);
+          }
+        } catch (_) {}
+
         setTimeout(() => {
           const dist = 360;
           Graph.cameraPosition({ x: 0, y: 0, z: dist }, { x: 0, y: 0, z: 0 }, 800);
         }, 400);
       })
       .catch(err => {
-        detail.innerHTML = '加载失败：' + esc(err.message) + '<br/>请用 python -m http.server 打开本目录。';
+        detail.innerHTML = '加载失败：' + esc(err.message);
       });
   </script>
 </body>
