@@ -97,7 +97,22 @@
     flex-wrap: wrap;
     gap: 6px;
     font-size: 11px;
+    margin-bottom: 6px;
+  }
+
+  .planet-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 10px;
+    font-size: 10px;
+    color: var(--muted);
     margin-bottom: 12px;
+    line-height: 1.45;
+  }
+
+  .planet-legend b {
+    color: #c4cad8;
+    font-weight: 550;
   }
 
   .legend span {
@@ -231,6 +246,14 @@
       <span><i class="dot" style="background:#e3b341;color:#e3b341"></i>learning</span>
       <span><i class="dot" style="background:#6ba4ff;color:#6ba4ff"></i>pushed</span>
       <span><i class="dot" style="background:#6e7681;color:#6e7681"></i>parked</span>
+    </div>
+    <div class="planet-legend">
+      <span><b>Guide</b> 太阳</span>
+      <span><b>Intel</b> 海王星</span>
+      <span><b>阶段</b> 水金地火木土</span>
+      <span><b>Day</b> 地球</span>
+      <span><b>Concept</b> 卫星</span>
+      <span><b>Digest</b> 小行星</span>
     </div>
     <div id="dailyList">
       <div class="dl-title">今日沉淀</div>
@@ -479,6 +502,267 @@
 
     loadDailyIndex();
 
+    /* ── Planet archetypes (Apple solar-system wallpaper vibe) ── */
+    const PHASE_PLANET = {
+      A_Cognition: 'mercury',
+      B_Algo: 'venus',
+      C_Infra: 'earth',
+      D_Control: 'mars',
+      E_Hardware: 'jupiter',
+      F_HandsOn: 'saturn'
+    };
+    const PHASE_ORDER = ['A_Cognition', 'B_Algo', 'C_Infra', 'D_Control', 'E_Hardware', 'F_HandsOn'];
+    const PHASE_FALLBACK = ['mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn'];
+
+    const PLANET_PALETTE = {
+      sun: {
+        bands: ['#fff6d8', '#ffe9a8', '#ffd56a', '#ffbf3f', '#fff1c2'],
+        pole: '#fffaf0', atmosphere: '#ffd27a', emissive: '#ffb84a',
+        roughness: 0.55, metalness: 0.05, atmosScale: 1.22, atmosOpacity: 0.38, ring: false
+      },
+      neptune: {
+        bands: ['#1a3a7a', '#2a5fad', '#3d7fd4', '#1e4a96', '#6aa8e8'],
+        pole: '#d8ecff', atmosphere: '#5aa8ff', emissive: '#1a4a9a',
+        roughness: 0.48, metalness: 0.12, atmosScale: 1.14, atmosOpacity: 0.28, ring: false
+      },
+      mercury: {
+        bands: ['#6a635c', '#8a8278', '#5c564f', '#9a9186', '#4a453f'],
+        pole: '#c8c0b4', atmosphere: '#a89888', emissive: '#3a3530',
+        roughness: 0.78, metalness: 0.18, atmosScale: 1.06, atmosOpacity: 0.1, ring: false
+      },
+      venus: {
+        bands: ['#e8d5a8', '#d4b878', '#c9a85c', '#f0e2c0', '#b8954a'],
+        pole: '#f7eed8', atmosphere: '#e8c878', emissive: '#a87830',
+        roughness: 0.52, metalness: 0.06, atmosScale: 1.12, atmosOpacity: 0.26, ring: false
+      },
+      earth: {
+        bands: ['#1a5f8a', '#2a7a4a', '#1e6e9a', '#3d8f55', '#0e4a72', '#cde8ff'],
+        pole: '#eef6ff', atmosphere: '#6ec8ff', emissive: '#1a5a7a',
+        roughness: 0.55, metalness: 0.08, atmosScale: 1.13, atmosOpacity: 0.3, ring: false
+      },
+      earthRich: {
+        bands: ['#0d4f7a', '#1f7a4e', '#2a8fd4', '#3fa05a', '#0a3d62', '#e8f4ff', '#d4e8c8'],
+        pole: '#f4f9ff', atmosphere: '#7ad4ff', emissive: '#1a6a8a',
+        roughness: 0.5, metalness: 0.1, atmosScale: 1.15, atmosOpacity: 0.34, ring: false
+      },
+      mars: {
+        bands: ['#8a3a28', '#b85a38', '#6e2e1e', '#c87848', '#5a2418'],
+        pole: '#e8e0d4', atmosphere: '#d47858', emissive: '#6a2818',
+        roughness: 0.72, metalness: 0.1, atmosScale: 1.08, atmosOpacity: 0.16, ring: false
+      },
+      jupiter: {
+        bands: ['#c49a62', '#e8c898', '#a87848', '#d4b078', '#8a5a32', '#f0d8b0', '#b88850'],
+        pole: '#f5e6c8', atmosphere: '#e0b878', emissive: '#8a6028',
+        roughness: 0.48, metalness: 0.08, atmosScale: 1.12, atmosOpacity: 0.22, ring: false
+      },
+      saturn: {
+        bands: ['#d4c090', '#e8d8a8', '#c0a870', '#f0e4c0', '#a89058', '#dcc898'],
+        pole: '#f8f0d8', atmosphere: '#e8d498', emissive: '#9a8040',
+        roughness: 0.5, metalness: 0.08, atmosScale: 1.1, atmosOpacity: 0.2, ring: true
+      },
+      moon: {
+        bands: ['#8a8e96', '#6e727a', '#a0a4ac', '#5a5e66', '#9aa0a8'],
+        pole: '#d8dce2', atmosphere: '#b0b8c4', emissive: '#3a3e48',
+        roughness: 0.82, metalness: 0.12, atmosScale: 1.05, atmosOpacity: 0.08, ring: false
+      },
+      asteroid: {
+        bands: ['#4a453f', '#5c564e', '#3a3530', '#6a635a', '#2e2a26'],
+        pole: '#8a8278', atmosphere: '#6a6058', emissive: '#2a2622',
+        roughness: 0.9, metalness: 0.15, atmosScale: 1.03, atmosOpacity: 0.04, ring: false
+      }
+    };
+
+    function resolveArchetype(node) {
+      const g = node.group || '';
+      const id = node.id || '';
+      if (g === 'meta') {
+        if (id === 'Guide' || /guide/i.test(id + (node.label || ''))) return 'sun';
+        if (id === 'Intel' || /intel/i.test(id + (node.label || ''))) return 'neptune';
+        return 'neptune';
+      }
+      if (g === 'phase') {
+        if (PHASE_PLANET[id]) return PHASE_PLANET[id];
+        const idx = PHASE_ORDER.indexOf(id);
+        if (idx >= 0) return PHASE_FALLBACK[idx % PHASE_FALLBACK.length];
+        // unknown phase: hash id into fallback
+        let h = 0;
+        for (let i = 0; i < id.length; i++) h = (h + id.charCodeAt(i) * (i + 1)) % PHASE_FALLBACK.length;
+        return PHASE_FALLBACK[h];
+      }
+      if (g === 'day') return 'earthRich';
+      if (g === 'concept') return 'moon';
+      if (g === 'digest') return 'asteroid';
+      return 'moon';
+    }
+
+    function hexToRgb(hex) {
+      const h = hex.replace('#', '');
+      const n = parseInt(h.length === 3 ? h.split('').map(c => c + c).join('') : h, 16);
+      return { r: (n >> 16) & 255, g: (n >> 8) & 255, b: n & 255 };
+    }
+
+    function rgbToHex(r, g, b) {
+      const c = (x) => Math.max(0, Math.min(255, x | 0)).toString(16).padStart(2, '0');
+      return '#' + c(r) + c(g) + c(b);
+    }
+
+    function mixHex(a, b, t) {
+      const A = hexToRgb(a), B = hexToRgb(b);
+      return rgbToHex(
+        A.r + (B.r - A.r) * t,
+        A.g + (B.g - A.g) * t,
+        A.b + (B.b - A.b) * t
+      );
+    }
+
+    function statusModulate(palette, status) {
+      const p = { ...palette, bands: palette.bands.slice() };
+      if (status === 'learning') {
+        p.atmosOpacity = Math.min(0.5, p.atmosOpacity * 1.35 + 0.06);
+        p.atmosScale = p.atmosScale + 0.03;
+        p.emissiveBoost = 0.22;
+      } else if (status === 'parked') {
+        p.bands = p.bands.map(c => mixHex(c, '#6e7681', 0.38));
+        p.pole = mixHex(p.pole, '#8b919a', 0.35);
+        p.atmosphere = mixHex(p.atmosphere, '#6e7681', 0.4);
+        p.emissive = mixHex(p.emissive, '#3a3e44', 0.45);
+        p.atmosOpacity *= 0.55;
+        p.emissiveBoost = 0.04;
+      } else if (status === 'pushed') {
+        p.atmosphere = mixHex(p.atmosphere, '#6ba4ff', 0.35);
+        p.emissiveBoost = 0.1;
+        p.rimCool = true;
+      } else if (status === 'done') {
+        p.atmosphere = mixHex(p.atmosphere, '#3fb950', 0.28);
+        p.emissiveBoost = 0.12;
+      } else {
+        p.emissiveBoost = 0.08;
+      }
+      return p;
+    }
+
+    function noise2(x, y, seed) {
+      const n = Math.sin(x * 12.9898 + y * 78.233 + seed * 45.164) * 43758.5453;
+      return n - Math.floor(n);
+    }
+
+    function fbm(x, y, seed) {
+      let v = 0, a = 0.5, f = 1;
+      for (let i = 0; i < 4; i++) {
+        v += a * noise2(x * f, y * f, seed + i * 17);
+        a *= 0.5; f *= 2.1;
+      }
+      return v;
+    }
+
+    function makePlanetTexture(archetype, palette, seed) {
+      const size = 256;
+      const canvas = document.createElement('canvas');
+      canvas.width = size;
+      canvas.height = size;
+      const ctx = canvas.getContext('2d');
+      const bands = palette.bands;
+      const img = ctx.createImageData(size, size);
+      const data = img.data;
+
+      for (let y = 0; y < size; y++) {
+        for (let x = 0; x < size; x++) {
+          const u = x / size;
+          const v = y / size;
+          // lat from -1..1 (equirect-ish for sphere UV)
+          const lat = (v - 0.5) * 2;
+          const pole = Math.pow(Math.abs(lat), 2.2);
+
+          let shade;
+          if (archetype === 'sun') {
+            const gran = fbm(u * 14, v * 14, seed);
+            const flare = 0.55 + 0.45 * Math.sin((u + gran * 0.1) * Math.PI * 6 + seed);
+            shade = 0.35 + gran * 0.4 + flare * 0.25;
+          } else if (archetype === 'jupiter' || archetype === 'saturn' || archetype === 'neptune' || archetype === 'venus') {
+            const bandN = fbm(u * 3, v * 18, seed);
+            const swirl = fbm(u * 8 + bandN, v * 6, seed + 3);
+            shade = (Math.sin(lat * Math.PI * (archetype === 'jupiter' ? 7 : 5) + swirl * 2.2 + seed) * 0.5 + 0.5);
+            shade = shade * 0.75 + bandN * 0.25;
+          } else if (archetype === 'earth' || archetype === 'earthRich') {
+            const land = fbm(u * 6, v * 4, seed);
+            const cloud = fbm(u * 10 + 2, v * 5, seed + 9);
+            const ocean = land < 0.48;
+            shade = ocean ? 0.15 + land * 0.35 : 0.55 + land * 0.4;
+            if (cloud > 0.62) shade = Math.min(1, shade + (cloud - 0.62) * 1.4);
+          } else if (archetype === 'asteroid') {
+            const crater = fbm(u * 12, v * 12, seed);
+            shade = 0.25 + fbm(u * 5, v * 5, seed + 1) * 0.45;
+            if (crater > 0.72) shade *= 0.55;
+            if (crater > 0.82) shade *= 0.7;
+          } else {
+            // rocky moon / mercury / mars
+            const n = fbm(u * 7, v * 6, seed);
+            const crater = fbm(u * 16, v * 16, seed + 5);
+            shade = 0.3 + n * 0.5;
+            if (crater > 0.78) shade *= 0.65;
+          }
+
+          const bi = Math.min(bands.length - 1, Math.max(0, Math.floor(shade * bands.length)));
+          let col = hexToRgb(bands[bi]);
+          // soft blend to neighbor band
+          const frac = shade * bands.length - bi;
+          if (bi + 1 < bands.length && frac > 0.15) {
+            const c2 = hexToRgb(bands[bi + 1]);
+            const t = (frac - 0.15) / 0.85;
+            col = {
+              r: col.r + (c2.r - col.r) * t,
+              g: col.g + (c2.g - col.g) * t,
+              b: col.b + (c2.b - col.b) * t
+            };
+          }
+
+          // poles
+          if (pole > 0.55 && archetype !== 'sun' && archetype !== 'asteroid') {
+            const pc = hexToRgb(palette.pole);
+            const pt = Math.min(1, (pole - 0.55) / 0.45);
+            col = {
+              r: col.r + (pc.r - col.r) * pt * 0.85,
+              g: col.g + (pc.g - col.g) * pt * 0.85,
+              b: col.b + (pc.b - col.b) * pt * 0.85
+            };
+          }
+
+          // limb soft noise
+          const n2 = noise2(x * 0.08, y * 0.08, seed) * 18 - 9;
+          const i = (y * size + x) * 4;
+          data[i] = Math.max(0, Math.min(255, col.r + n2));
+          data[i + 1] = Math.max(0, Math.min(255, col.g + n2));
+          data[i + 2] = Math.max(0, Math.min(255, col.b + n2 * 0.8));
+          data[i + 3] = 255;
+        }
+      }
+      ctx.putImageData(img, 0, 0);
+      const tex = new THREE.CanvasTexture(canvas);
+      tex.colorSpace = THREE.SRGBColorSpace || THREE.sRGBEncoding;
+      tex.needsUpdate = true;
+      tex.anisotropy = 4;
+      return tex;
+    }
+
+    function planetRadius(node, archetype) {
+      // Absolute core radius in scene units (replaces default sphere)
+      let r = 5.5;
+      if (archetype === 'sun') r = 9.2;
+      else if (archetype === 'neptune') r = 7.2;
+      else if (archetype === 'earthRich') r = 7.0;
+      else if (archetype === 'jupiter') r = 7.6;
+      else if (archetype === 'saturn') r = 7.0;
+      else if (archetype === 'earth') r = 6.4;
+      else if (archetype === 'venus') r = 6.0;
+      else if (archetype === 'mars') r = 5.6;
+      else if (archetype === 'mercury') r = 4.8;
+      else if (archetype === 'moon') r = 4.0;
+      else if (archetype === 'asteroid') r = 3.1;
+
+      if (node.status === 'learning' && (node.group === 'day' || archetype === 'sun')) r *= 1.06;
+      return r;
+    }
+
     function makeLabelSprite(node) {
       const canvas = document.createElement('canvas');
       const dpr = 2;
@@ -529,6 +813,125 @@
       return sprite;
     }
 
+    function makePlanet(node) {
+      const archetype = resolveArchetype(node);
+      const basePal = PLANET_PALETTE[archetype] || PLANET_PALETTE.moon;
+      const pal = statusModulate(basePal, node.status);
+      const seed = (node.id || 'x').split('').reduce((a, c, i) => a + c.charCodeAt(0) * (i + 3), 11);
+      const radius = planetRadius(node, archetype);
+
+      const group = new THREE.Group();
+      group.userData = { archetype, planet: true };
+
+      const tex = makePlanetTexture(archetype, pal, seed);
+      const geo = new THREE.SphereGeometry(radius, 64, 48);
+
+      const matOpts = {
+        map: tex,
+        roughness: pal.roughness,
+        metalness: pal.metalness,
+        emissive: new THREE.Color(pal.emissive),
+        emissiveIntensity: (pal.emissiveBoost || 0.08) * (archetype === 'sun' ? 2.4 : 1)
+      };
+      // MeshPhysicalMaterial if available for softer specular
+      let coreMat;
+      if (THREE.MeshPhysicalMaterial) {
+        coreMat = new THREE.MeshPhysicalMaterial({
+          ...matOpts,
+          clearcoat: archetype === 'neptune' || archetype === 'earth' || archetype === 'earthRich' ? 0.25 : 0.08,
+          clearcoatRoughness: 0.55,
+          reflectivity: 0.35
+        });
+      } else {
+        coreMat = new THREE.MeshStandardMaterial(matOpts);
+      }
+      const core = new THREE.Mesh(geo, coreMat);
+      group.add(core);
+
+      // Atmosphere / corona shell
+      const atmosR = radius * pal.atmosScale;
+      const atmosGeo = new THREE.SphereGeometry(atmosR, 48, 32);
+      const atmosColor = new THREE.Color(pal.atmosphere);
+      const atmosMat = new THREE.MeshBasicMaterial({
+        color: atmosColor,
+        transparent: true,
+        opacity: pal.atmosOpacity,
+        blending: THREE.AdditiveBlending,
+        depthWrite: false,
+        side: THREE.BackSide
+      });
+      const atmos = new THREE.Mesh(atmosGeo, atmosMat);
+      group.add(atmos);
+
+      // Soft outer glow (limb)
+      if (archetype === 'sun' || node.status === 'learning') {
+        const glow = new THREE.Mesh(
+          new THREE.SphereGeometry(atmosR * 1.08, 32, 24),
+          new THREE.MeshBasicMaterial({
+            color: atmosColor,
+            transparent: true,
+            opacity: archetype === 'sun' ? 0.16 : 0.08,
+            blending: THREE.AdditiveBlending,
+            depthWrite: false,
+            side: THREE.BackSide
+          })
+        );
+        group.add(glow);
+      }
+
+      // Subtle ring for Saturn (and learning-day optional skipped — Saturn only)
+      if (pal.ring) {
+        const ring = new THREE.Mesh(
+          new THREE.TorusGeometry(radius * 1.55, radius * 0.045, 10, 80),
+          new THREE.MeshStandardMaterial({
+            color: mixHex(pal.bands[1] || '#d4c090', '#ffffff', 0.15),
+            roughness: 0.65,
+            metalness: 0.12,
+            transparent: true,
+            opacity: 0.42,
+            emissive: new THREE.Color(pal.emissive),
+            emissiveIntensity: 0.05
+          })
+        );
+        ring.rotation.x = Math.PI / 2.35;
+        group.add(ring);
+      }
+
+      // Frosted label above planet
+      const label = makeLabelSprite(node);
+      label.position.y = atmosR + 5.2;
+      group.add(label);
+
+      return group;
+    }
+
+    function ensurePlanetLighting(Graph) {
+      try {
+        const scene = Graph.scene();
+        if (!scene || scene.userData.__planetLights) return;
+        scene.userData.__planetLights = true;
+
+        // Soft ambient so StandardMaterial reads against starfield
+        const ambient = new THREE.AmbientLight(0xb8c4e0, 0.55);
+        scene.add(ambient);
+
+        // Key from upper-right (warm)
+        const key = new THREE.DirectionalLight(0xfff2e0, 1.05);
+        key.position.set(120, 160, 80);
+        scene.add(key);
+
+        // Cool weak fill
+        const fill = new THREE.DirectionalLight(0x8eb0ff, 0.32);
+        fill.position.set(-90, -40, -70);
+        scene.add(fill);
+
+        // Subtle rim / back
+        const rim = new THREE.DirectionalLight(0xc8d8ff, 0.18);
+        rim.position.set(-40, 60, -120);
+        scene.add(rim);
+      } catch (_) {}
+    }
+
     fetch('data/graph.json')
       .then(r => {
         if (!r.ok) throw new Error('graph.json HTTP ' + r.status);
@@ -547,8 +950,12 @@
           .backgroundColor('rgba(0,0,0,0)')
           .showNavInfo(false)
           .nodeId('id')
-          .nodeLabel(n => `${n.label}\n[${n.status}]`)
+          .nodeLabel(n => `${n.label}\n[${n.status}] · ${resolveArchetype(n)}`)
           .nodeVal(n => {
+            if (n.id === 'Guide') return 12;
+            if (n.group === 'day') return 9;
+            if (n.group === 'meta') return 10;
+            if (n.group === 'phase') return 7;
             if (n.status === 'learning') return 8;
             if (n.group === 'concept' || n.group === 'digest') return 4;
             return 5;
@@ -588,8 +995,8 @@
             mid.z = (start.z + end.z) / 2;
             Object.assign(obj.position, mid);
           })
-          .nodeThreeObject(node => makeLabelSprite(node))
-          .nodeThreeObjectExtend(true)
+          .nodeThreeObject(node => makePlanet(node))
+          .nodeThreeObjectExtend(false)
           .onNodeClick(node => {
             detail.innerHTML = renderNode(node);
           });
@@ -602,6 +1009,7 @@
         });
 
         graphRef = Graph;
+        ensurePlanetLighting(Graph);
 
         try {
           const renderer = Graph.renderer();
