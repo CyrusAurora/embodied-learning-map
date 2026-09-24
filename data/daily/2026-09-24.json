@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-24",
+  "learning": {
+    "id": "A1",
+    "status": "learning",
+    "note": "无反馈续推；提醒交验收／四块偏好",
+    "goal": "弄清具身智能是什么系统，以及董云龙路线里四块技术各自在解决什么问题。",
+    "points": [
+      {"term": "Embodied AI", "plain": "一套把环境理解、智能交互、认知推理、规划执行串在一起的系统，要在物理世界里感知并行动。"},
+      {"term": "LLM as General Planner", "plain": "大模型靠常识和推理，把人的自然语言意图转成可调用的机器人规划代码（通过预置 API，如移动、抓取）。"},
+      {"term": "场景理解", "plain": "用分割（如 SAM）、开放词表检测、多模态 Grounding，把「看到的场景」变成机器能用的物体／像素级表示。"},
+      {"term": "数据引导", "plain": "策略要数据；来源包括人类视频模仿、轻量采集（如 UMI）、重型遥操作、生成式仿真扩增（如 MimicGen／RoboGen）。"},
+      {"term": "动作执行", "plain": "把感知变成电机动作。常见路有生成式模仿学习（ACT、Diffusion Policy），以及基于 Affordance 或 LLM 规划／语言纠错来出动作。"},
+      {"term": "World Model", "plain": "学的是在当前状态做某个动作之后，下一状态大概怎样，用来想象交互后果，再辅助操作。"},
+      {"term": "大脑／小脑失衡", "plain": "语言决策侧进步快，灵巧运动控制侧仍短板。"}
+    ],
+    "links": [
+      {"title": "Embodied-AI-Guide（§1+§3）", "url": "https://github.com/TianxingChen/Embodied-AI-Guide"},
+      {"title": "董云龙：具身智能基础技术路线（Bilibili）", "url": "https://www.bilibili.com/video/BV1d5ukedEsi"},
+      {"title": "具身智能基础技术路线-YunlongDong.pdf（Guide）", "url": "https://raw.githubusercontent.com/TianxingChen/Embodied-AI-Guide/main/files/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80%E6%8A%80%E6%9C%AF%E8%B7%BA%E7%BA%BF-YunlongDong.pdf"}
+    ],
+    "drive": {
+      "recommend": "https://drive.google.com/file/d/18710xE_QvCG_M8RITDg_VKGz4EJmIcHu/view?usp=drivesdk",
+      "cardHtml": "https://drive.google.com/file/d/1zj5Ii2B6Zd1JBZmKIgzgtR7Mll4_4weV/view?usp=drivesdk",
+      "cardPng": "https://drive.google.com/file/d/1a7O7G06V5Ue1ZF6R_p01xd1kPIFBEP7O/view?usp=drivesdk"
+    }
+  }
+}

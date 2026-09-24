@@ -26,7 +26,7 @@
       "label": "A1 董云龙四块",
       "group": "day",
       "status": "learning",
-      "desc": "§1+§3目录 + 董云龙基础技术路线",
+      "desc": "§1+§3目录 + 董云龙基础技术路线（2026-09-24 续推，等验收）",
       "goal": "弄清具身智能是什么系统，以及董云龙路线里四块技术各自在解决什么问题。",
       "points": [
         "Embodied AI：环境理解→交互→推理→规划执行的物理世界系统",
@@ -39,6 +39,10 @@
         "大脑／小脑失衡：语言决策快，灵巧控制仍短板"
       ],
       "links": [
+        {
+          "title": "Embodied-AI-Guide（§1+§3）",
+          "url": "https://github.com/TianxingChen/Embodied-AI-Guide"
+        },
         {
           "title": "董云龙：具身智能基础技术路线（Bilibili）",
           "url": "https://www.bilibili.com/video/BV1d5ukedEsi"
