@@ -206,6 +206,76 @@
       "group": "phase",
       "status": "parked",
       "desc": "RoboTwin 后置"
+    },
+    {
+      "id": "Digest_20260924",
+      "label": "Digest 09-24",
+      "group": "digest",
+      "status": "pushed",
+      "desc": "AIHOT 晨间情报（未耗 X；具身多为 mode=all）",
+      "detail": "## Morning digest 2026-09-24（AIHOT；未耗 X）\n\nFull daily: https://aihot.news/daily/2026-09-24\n\n### General AI\n1. OpenRouter 解析 Kimi K3：开源权重与许可证条款\n2. OpenAI 智能体未经授权访问澳大利亚 Medicare 系统\n3. Cursor 发布 Rollouts 和 Security Reviewer 开发机器人\n4. Cursor agent 长时运行 token 成本降低 7%\n5. AI 负责人联合国安理会警告 AI 可能危及全人类\n6. Fireworks Ember-1：少约 40% token 对齐 Kimi K3 质量\n7. Anthropic：两周把 claude.ai 提速约 3 倍\n\n### Embodied（多为未进精选）\n1. NVIDIA Warp/MJWarp：MuJoCo 扩到 2048 并行环境（未进精选）\n2. RoboFollow：具身指令遵循诊断基准（未进精选）\n3. Skild AI：140 年自博弈训人形踢球 Messinator（未进精选）\n4. 微软研究：AI 推理移出机器人本体（未进精选）\n5. 马斯克预测十年内至少 10 亿台人形机器人（未进精选）\n",
+      "items": {
+        "general": [
+          {
+            "title": "OpenRouter 解析 Kimi K3：开源权重与许可证条款",
+            "url": "https://aihot.news/items/cmuetpj5l04curohbgsl4cj6m"
+          },
+          {
+            "title": "OpenAI 智能体未经授权访问澳大利亚 Medicare 系统",
+            "url": "https://aihot.news/items/cmuepgrq30eh3royntmaj59h4"
+          },
+          {
+            "title": "Cursor 发布 Rollouts 和 Security Reviewer 开发机器人",
+            "url": "https://aihot.news/items/cmuepgodc0egsroynju6bomql"
+          },
+          {
+            "title": "Cursor agent 长时运行 token 成本降低 7%",
+            "url": "https://aihot.news/items/cmuepgodc0egrroyn9ves9c7r"
+          },
+          {
+            "title": "AI 负责人联合国安理会警告 AI 可能危及全人类",
+            "url": "https://aihot.news/items/cmueno9s80cv0royn7zd2ihe1"
+          },
+          {
+            "title": "Fireworks Ember-1：少约 40% token 对齐 Kimi K3 质量",
+            "url": "https://aihot.news/items/cmuemnn9m07yproynbzmmumd3"
+          },
+          {
+            "title": "Anthropic：两周把 claude.ai 提速约 3 倍",
+            "url": "https://aihot.news/items/cmuekny10060lroyn21gctbfw"
+          }
+        ],
+        "embodied": [
+          {
+            "title": "NVIDIA Warp/MJWarp：MuJoCo 扩到 2048 并行环境（未进精选）",
+            "url": "https://aihot.news/items/cmueh7zxg05jkrovxo3q4avze"
+          },
+          {
+            "title": "RoboFollow：具身指令遵循诊断基准（未进精选）",
+            "url": "https://aihot.news/items/cmudy72bi0c2srogh1s154unk"
+          },
+          {
+            "title": "Skild AI：140 年自博弈训人形踢球 Messinator（未进精选）",
+            "url": "https://aihot.news/items/cmuef56t607cwrox36vu2d3w1"
+          },
+          {
+            "title": "微软研究：AI 推理移出机器人本体（未进精选）",
+            "url": "https://aihot.news/items/cmueb30t60twyroghqh88w78o"
+          },
+          {
+            "title": "马斯克预测十年内至少 10 亿台人形机器人（未进精选）",
+            "url": "https://aihot.news/items/cmudpyjg10o1frogg8xv5wd6f"
+          }
+        ]
+      },
+      "links": [
+        {
+          "title": "Full daily 2026-09-24",
+          "url": "https://aihot.news/daily/2026-09-24"
+        }
+      ],
+      "source": "AIHOT",
+      "xUsed": false
     }
   ],
   "links": [
@@ -288,6 +358,11 @@
       "source": "E_Hardware",
       "target": "F_HandsOn",
       "label": "后置"
+    },
+    {
+      "source": "Intel",
+      "target": "Digest_20260924",
+      "label": "今日"
     }
   ]
 }

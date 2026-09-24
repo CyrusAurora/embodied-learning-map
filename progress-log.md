@@ -7,3 +7,4 @@
 - 2026-09-23 14:50：用户确认 A1+情报可用；已沉淀进 learning-map 站点（graph 概念节点 + data/daily/2026-09-23.json）。A1 仍 learning，等四块偏好反馈。
 
 - 2026-09-24 08:40：无反馈，按课表续推 A1（董云龙四块）。已写知识卡+三连，上传 Drive 06/07，提醒交验收句／四块偏好。节点仍 A1 learning；不进 A2。
+- 2026-09-24 09:00：晨间情报双轨已推（AIHOT selected 通用 + 具身 mode=all 未进精选；未耗 X）。已写入 data/daily/2026-09-24.json digest 与 Digest_20260924 节点。
