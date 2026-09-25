@@ -54,5 +54,74 @@
       "cardHtml": "https://drive.google.com/file/d/157XZOp_Jt-4ROOjZxVh9-VLHFgUafGJa/view?usp=drivesdk",
       "cardPng": "https://drive.google.com/file/d/1K70M2R-04CdfcxKtEMvySJ-5Gpn6Ksyh/view?usp=drivesdk"
     }
+  },
+  "digest": {
+    "source": "AIHOT",
+    "dailyUrl": "https://aihot.news/daily/2026-09-25",
+    "general": [
+      {
+        "title": "GitHub Security Lab：LLM 驱动 Fuzzing Taskflow 自动跑 C/C++ 模糊测试全流程",
+        "url": "https://aihot.news/items/cmufwtcfq034nrogvh3zpr6df"
+      },
+      {
+        "title": "vLLM 新增基于 Gumbel-max 的无失真文本水印",
+        "url": "https://aihot.news/items/cmuftlsmy08bfroxz8mnqow1d"
+      },
+      {
+        "title": "GEO 污染 ChatGPT／Gemini／AI Overview：374 家企业被植入诈骗联系方式",
+        "url": "https://aihot.news/items/cmuft4xrw07varoxz9brnf7vh"
+      },
+      {
+        "title": "Anthropic 发布 Claude Opus 5.5：长编码会话典型成本约降 40%",
+        "url": "https://aihot.news/items/cmufrangt05nfroxzoslf2b9s"
+      },
+      {
+        "title": "NVIDIA×DeepMind 等开放 2800+ 病毒蛋白复合物预测结构数据集",
+        "url": "https://aihot.news/items/cmufo8rn007i8ro8wylbdcop0"
+      },
+      {
+        "title": "OpenAI 智能体在 Hugging Face 事件前数月已尝试入侵政府／大学网站",
+        "url": "https://aihot.news/items/cmufmonss05qtro8wec8r2gd3"
+      },
+      {
+        "title": "澳大利亚将调查 OpenAI 模型入侵政府医疗网站是否违法",
+        "url": "https://aihot.news/items/cmufjfzsr04avro6oidhywggl"
+      }
+    ],
+    "embodied": [
+      {
+        "title": "Black Forest Labs 开源 FLUX 3 Action（7B 世界动作模型，面向机器人）（未进精选）",
+        "url": "https://aihot.news/items/cmuft47up07tzroxzdz4pqgrd"
+      },
+      {
+        "title": "上海AI实验室 InternW0：物理世界模型基础版（未进精选）",
+        "url": "https://aihot.news/items/cmuewn5g2033uro3kvduc8km8"
+      },
+      {
+        "title": "宇树 19 台全尺寸人形与 120 舞者上海开幕式同台（未进精选）",
+        "url": "https://aihot.news/items/cmuf8coco04jorocsa8q1612i"
+      },
+      {
+        "title": "特斯拉 App 泄露 Optimus Gen 3：双手 22 DoF，目标年产 100 万台（未进精选）",
+        "url": "https://aihot.news/items/cmuf7mqil03pfrocsd5v1wd54"
+      },
+      {
+        "title": "智元×长隆：超 300 台机器人主题乐园开园；第 20000 台远征 A3 Ultra 交付（未进精选）",
+        "url": "https://aihot.news/items/cmufe278m0012ropdq70f6haj"
+      },
+      {
+        "title": "EmbodiedSWE：编码智能体为长时程灵巧任务提供可扩展监督（未进精选）",
+        "url": "https://aihot.news/items/cmuf32nqp08h3rood44avzy6x"
+      },
+      {
+        "title": "Uranus：具身仿真基础设施，关节轨迹条件自回归扩散（未进精选）",
+        "url": "https://aihot.news/items/cmuf9i85e05unrocspu14uibx"
+      },
+      {
+        "title": "自变量 X-Planner：具身事件结构化任务规划器（未进精选）",
+        "url": "https://aihot.news/items/cmufma8ig0539ro8wxu2pyovl"
+      }
+    ],
+    "xUsed": false
   }
 }
