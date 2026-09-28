@@ -54,5 +54,38 @@
       "cardHtml": "https://drive.google.com/file/d/1o9wDKMv3qslC_PX_xBnRcsw1irx8J4vk/view?usp=drivesdk",
       "cardPng": "https://drive.google.com/file/d/1yYHJO8FMiYV3XQBgjO0wgpwjmwKJ58hP/view?usp=drivesdk"
     }
+  },
+  "digest": {
+    "source": "AIHOT",
+    "dailyUrl": "https://aihot.news/daily/2026-09-28",
+    "general": [
+      {
+        "title": "小米 MiMo-V2.6 诊断并修复工具调用重复问题，用 MOPD 将修复成本降至 MixRL 方案的 4%",
+        "url": "https://aihot.news/items/cmuk25h00156vro9h173e1zjz"
+      },
+      {
+        "title": "Authors Guild v. OpenAI 新文件披露高管早已知道大规模盗版书籍训练违法",
+        "url": "https://aihot.news/items/cmujmfafc0lsrro9hqdnqg5or"
+      },
+      {
+        "title": "OpenAI 与 Anthropic CEO 被传唤出席澳大利亚参议院 AI 调查听证会",
+        "url": "https://aihot.news/items/cmujftxjg0exdro9hi64xx2i9"
+      }
+    ],
+    "embodied": [
+      {
+        "title": "斯坦福与 Caltech 用 GPT-6 Astra 直驱 Unitree G1 整理陌生厨房（HomeBody）（未进精选）",
+        "url": "https://aihot.news/items/cmujpkpow0ovsro9hwa5jrkw5"
+      },
+      {
+        "title": "Mark Cuban 看衰人形机器人：5–10 年内失败，形态将按场景专用化（未进精选）",
+        "url": "https://aihot.news/items/cmuka9f131gupro9h2biilfbt"
+      },
+      {
+        "title": "中国救援机器人自主飞向溺水者：约 10–14 m/s，覆盖约 2 km（未进精选）",
+        "url": "https://aihot.news/items/cmuk842f51eriro9hs02kzv3v"
+      }
+    ],
+    "xUsed": false
   }
 }
