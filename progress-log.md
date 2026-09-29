@@ -1,4 +1,5 @@
 # progress-log
+- 2026-09-29 09:10：晨间情报双轨已推（AIHOT selected 通用 8 + 具身 1 精选／3 未进精选；未耗 X）。已写入 data/daily/2026-09-29.json digest 与 Digest_20260929 节点。
 - 2026-09-23 下午：用户纠偏——整体认知未立就钻开环/闭环。对齐 Embodied-AI-Guide：主枝改 FieldMap；Control/开环/闭环 parked；今日三连改 Guide§1+§3 + 董云龙路线 + 许华哲2025回望。
 - 2026-09-23 上午：开环/闭环 stuck→降密度包（已废止为当日主推）。
 - 2026-09-23：用户锁定——只用 Guide 材料；助手=排期+引导+监督。课表见 guide-curriculum.md；当前 A1。

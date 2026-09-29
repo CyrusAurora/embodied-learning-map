@@ -330,6 +330,76 @@
       ],
       "source": "AIHOT",
       "xUsed": false
+    },
+    {
+      "id": "Digest_20260929",
+      "label": "Digest 09-29",
+      "group": "digest",
+      "status": "pushed",
+      "desc": "AIHOT 晨间情报（未耗 X；具身 1 精选 + 3 未进精选）",
+      "detail": "## Morning digest 2026-09-29（AIHOT；未耗 X）\n\nFull daily: https://aihot.news/daily/2026-09-29\n\n### General AI\n1. Meta Muse：未经许可泄露住址并约买家上门\n2. 消息称 OpenAI 因安全隐患取消 GPT‑6.1 Astra\n3. Anthropic IPO 招股书：2025 净亏损 420 亿美元等（数字请回原文）\n4. Fireworks FireRouter with Opus：编码成本降 57%\n5. Databricks：1.4 万员工 Day1 上新模型流程\n6. Arena：GPT-6 Luna (Max) Agent Arena 第 23，单任务约 $0.05\n7. Tunguz：GPU 租金翻倍与 AI 价格下降并存\n8. xAI Team Bots\n\n### Embodied\n1. World Labs 加入 AMD（精选）；多方称约 $8.2B，李飞飞任 EVP／首席科学家\n2. 宇树 2026 世界物理 AI 大会（10/22 杭州）（未进精选）\n3. 蚂蚁灵波 × AFDE 具身合作备忘录（未进精选）\n4. 智元×长隆：超 300 台机器人主题乐园常态化上岗（未进精选）\n",
+      "resources": {
+        "general": [
+          {
+            "title": "Meta AI 智能体 Muse 被指未经许可泄露用户住址并擅自约买家上门",
+            "url": "https://aihot.news/items/ojft30prd1oss7mf78quyvq2o"
+          },
+          {
+            "title": "消息称 OpenAI 因安全隐患取消发布 GPT‑6.1 Astra",
+            "url": "https://aihot.news/items/orf4vhjkb0mj0mvff6dw9a03q"
+          },
+          {
+            "title": "Anthropic IPO 招股书曝光：2025 年净亏损 420 亿美元，估值有望突破 2 万亿美元",
+            "url": "https://aihot.news/items/jrp2kp8w4h2k80523cd04i9vo"
+          },
+          {
+            "title": "Fireworks AI 推出 FireRouter with Opus，编码任务成本降 57%",
+            "url": "https://aihot.news/items/dar8v1xrcbo6twfu4wldiexak"
+          },
+          {
+            "title": "Databricks 如何让 1.4 万名员工在模型发布首日用上新模型",
+            "url": "https://aihot.news/items/hgmzf75q1kdvl9q3y9g3nz7ry"
+          },
+          {
+            "title": "Arena 评测：GPT-6 Luna (Max) 列 Agent Arena 第 23 名，单任务成本仅 $0.05",
+            "url": "https://aihot.news/items/d6db33d5gkum5q95ntdszq48b"
+          },
+          {
+            "title": "Tomer Tunguz 解析 GPU 租金翻倍而 AI 价格下降的并行逻辑",
+            "url": "https://aihot.news/items/anv10mmxzvolzjhlp5asqgz1l"
+          },
+          {
+            "title": "xAI 发布 Team Bots：可与团队共同学习工作的 Grok 智能体",
+            "url": "https://aihot.news/items/fdxv7xdod1fsy99fvzekceja5"
+          }
+        ],
+        "embodied": [
+          {
+            "title": "World Labs 宣布加入 AMD（精选）；多方称交易约 82 亿美元，李飞飞出任 EVP／首席科学家",
+            "url": "https://aihot.news/items/gikl2tjm7h3e1kf1j47v7rh41"
+          },
+          {
+            "title": "宇树举办 2026 世界物理 AI 大会暨生态峰会（10/22 杭州）（未进精选）",
+            "url": "https://aihot.news/items/zfe0lyxeorhg5qtkqevhnfitq"
+          },
+          {
+            "title": "蚂蚁灵波与 AFDE 签署具身智能合作备忘录（未进精选）",
+            "url": "https://aihot.news/items/y2xktz52bh9vakyd3zsgj18zn"
+          },
+          {
+            "title": "智元与长隆：超 300 台机器人常态化上岗主题乐园（未进精选）",
+            "url": "https://aihot.news/items/oqa6n0jq3r0zo6v1op09zjxq1"
+          }
+        ]
+      },
+      "links": [
+        {
+          "title": "Full daily 2026-09-29",
+          "url": "https://aihot.news/daily/2026-09-29"
+        }
+      ],
+      "source": "AIHOT",
+      "xUsed": false
     }
   ],
   "links": [
@@ -426,6 +496,11 @@
     {
       "source": "Intel",
       "target": "Digest_20260928",
+      "label": "今日"
+    },
+    {
+      "source": "Intel",
+      "target": "Digest_20260929",
       "label": "今日"
     }
   ]
