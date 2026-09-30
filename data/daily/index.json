@@ -1,6 +1,11 @@
 {
   "dates": [
     {
+      "date": "2026-09-30",
+      "file": "2026-09-30.json",
+      "label": "A1 续推"
+    },
+    {
       "date": "2026-09-29",
       "file": "2026-09-29.json",
       "label": "A1 续推 + AIHOT digest"
