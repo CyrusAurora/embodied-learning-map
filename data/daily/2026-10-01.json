@@ -54,5 +54,74 @@
       "cardHtml": "https://drive.google.com/file/d/1TzfqC5BqF9neCYa7V1gDSdA5YBlnyiiM/view?usp=drivesdk",
       "cardPng": "https://drive.google.com/file/d/1TEMZtWjn8DhnsNO5-aB_VGh0CS2NKN3M/view?usp=drivesdk"
     }
+  },
+  "digest": {
+    "source": "AIHOT",
+    "dailyUrl": "https://aihot.news/daily/2026-10-01",
+    "general": [
+      {
+        "title": "Transluce 报告 AI 智能体以激进手段访问美加政府网站",
+        "url": "https://aihot.news/items/pmrfien75u21keottpq5php5z"
+      },
+      {
+        "title": "Artificial Analysis：GPT-6.1 Sol 的 Cost per Task 较 GPT-6 Sol 低约 30%",
+        "url": "https://aihot.news/items/p3cwq54s9gugqpmljv3xm97lv"
+      },
+      {
+        "title": "Gemini 4 Argon (High) 登 Arena Agent Arena 第 8 名，净提升 +7.92%",
+        "url": "https://aihot.news/items/m49i2ro59f3lqy8ocoghr9f2j"
+      },
+      {
+        "title": "Artificial Analysis 评测 Gemini 4 Argon：Google 重回智能前三梯队",
+        "url": "https://aihot.news/items/thdata2aa7ex9kgzv72mk4kn3"
+      },
+      {
+        "title": "Google DeepMind 发布 Gemini 4 Argon，面向可信网络防御者先行开放",
+        "url": "https://aihot.news/items/uob3jvsb97uh5achwaggjrhqh"
+      },
+      {
+        "title": "METR 主席 Chris Painter 就 AI 智能体事件向美国参议院作证",
+        "url": "https://aihot.news/items/r2far2n8h11f0h28301dhk85y"
+      },
+      {
+        "title": "Perplexity 开放 Computer 邮件委托入口并限时免费运行任务",
+        "url": "https://aihot.news/items/zdncjvjrmmknlsf9tevjlrnrg"
+      },
+      {
+        "title": "Trump 推动二十余家科技公司签署自愿性 AI 安全协议",
+        "url": "https://aihot.news/items/huhcnz3mwim553m2t8c0jhh4b"
+      }
+    ],
+    "embodied": [
+      {
+        "title": "Anthropic 研究测算机器人对岗位的暴露度：机器人可做 74% 的物理任务但仅 0.3% 具备成本竞争力",
+        "url": "https://aihot.news/items/lzxm86234leqs91hbocegps1l"
+      },
+      {
+        "title": "Runway 发布开放权重世界动作模型 Praxis-1（未进精选）",
+        "url": "https://aihot.news/items/jy14ixj24ndgmnbegekhvwgn4"
+      },
+      {
+        "title": "WorldLine：面向机器人操作的动作驱动视觉模拟器（未进精选）",
+        "url": "https://aihot.news/items/am57xntsp3q7imrxoq3v6l29l"
+      },
+      {
+        "title": "CrossBFM：跨人形机器人形态蒸馏共享潜在行为空间（未进精选）",
+        "url": "https://aihot.news/items/is6zc30vc710gqwqdgabp4xr0"
+      },
+      {
+        "title": "Destro AI 获 800 万美元种子轮，用智能层让机器人与人类协同作业（未进精选）",
+        "url": "https://aihot.news/items/wsuw7fthyotk6ywc80z79adud"
+      },
+      {
+        "title": "美光称每台人形机器人需超 200GB DRAM，内存高价恐成常态（未进精选）",
+        "url": "https://aihot.news/items/y2tcxkuxovc4xzrudcxwlw2ns"
+      },
+      {
+        "title": "心资本韩彦 SuperReturn Asia 演讲：2026至2028年中国硬科技早期投资窗口（未进精选）",
+        "url": "https://aihot.news/items/t9ljb61nu7l3a89je98lcfbac"
+      }
+    ],
+    "xUsed": false
   }
 }
