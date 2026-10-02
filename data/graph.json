@@ -483,6 +483,69 @@
         "daily": "https://aihot.news/daily/2026-10-01",
         "xUsed": false
       }
+    },
+    {
+      "id": "Digest_20261002",
+      "label": "Digest 10-02",
+      "group": "digest",
+      "status": "pushed",
+      "desc": "AIHOT 晨间情报（具身精选空；全量+X 盯梢共 3 条）",
+      "detail": "## Morning digest 2026-10-02（AIHOT；X 盯梢）\\n\\nDaily main: Claude Code mods\\n\\nFull daily: https://aihot.news/daily/2026-10-02\\n\\n### General AI\\n1. Artificial Analysis：Claude Sonnet 5.5、GPT-6.1 Sol 与 Gemini 4 Argon 登顶 Coding Agent Index，成本差很大\\n2. OpenRouter：LangChain / CrewAI 编排 vs OpenRouter 原生路由\\n3. NVIDIA：Blackwell 如何加速 OpenAI GPT-6 Astra Ultrafast\\n4. 加州检察长向 OpenAI 发传票，查 AI 智能体网络安全风险\\n5. Google 首个轨道 AI 芯片试验确认在轨正常\\n6. Qwen-Image-2.1 成 AA-Image 两榜开源权重第一\\n7. Suno 推出 Speech beta：语音+背景音乐一体生成\\n8. Epoch AI：ChatGPT usage explorer（5000 名美国用户约三年记录）\\n\\n### Embodied\\n1. 马斯克：为推进 Optimus 量产，特斯拉 AI5／AI6 内存砍半（未进精选）\\n2. Boston Dynamics：Atlas 新 4 指机械手，13 自由度，为用人类工具（未进精选）\\n3. Agility：Digit 与 Fort Robotics 做 Offboard Safety Bridge（X 盯梢）\\n",
+      "resources": {
+        "general": [
+          {
+            "title": "Artificial Analysis：Claude Sonnet 5.5、GPT-6.1 Sol 与 Gemini 4 Argon 登顶 Coding Agent Index，成本差很大",
+            "url": "https://aihot.news/items/jhshh53c18f71tkzk44izbs25"
+          },
+          {
+            "title": "OpenRouter：LangChain / CrewAI 编排 vs OpenRouter 原生路由",
+            "url": "https://aihot.news/items/ukk2qw5l1r9jqhsykqai2cf30"
+          },
+          {
+            "title": "NVIDIA：Blackwell 如何加速 OpenAI GPT-6 Astra Ultrafast",
+            "url": "https://aihot.news/items/rp0ocer4fughonyd9ddfr3r8i"
+          },
+          {
+            "title": "加州检察长向 OpenAI 发传票，查 AI 智能体网络安全风险",
+            "url": "https://aihot.news/items/iw7ix94rgvhp2jgamykh261gl"
+          },
+          {
+            "title": "Google 首个轨道 AI 芯片试验确认在轨正常",
+            "url": "https://aihot.news/items/fe27jbwrn6gfzym6j9q179auw"
+          },
+          {
+            "title": "Qwen-Image-2.1 成 AA-Image 两榜开源权重第一",
+            "url": "https://aihot.news/items/kaz49j9sbrf1rcugch9d2fdjm"
+          },
+          {
+            "title": "Suno 推出 Speech beta：语音+背景音乐一体生成",
+            "url": "https://aihot.news/items/rnjrj40fmm98d9duz9lcuk8u2"
+          },
+          {
+            "title": "Epoch AI：ChatGPT usage explorer（5000 名美国用户约三年记录）",
+            "url": "https://aihot.news/items/uli2rb6y55e3p9z1rh1t8efld"
+          }
+        ],
+        "embodied": [
+          {
+            "title": "马斯克：为推进 Optimus 量产，特斯拉 AI5／AI6 内存砍半（未进精选）",
+            "url": "https://aihot.news/items/wdfj2540eygfoxe8ld849tisk",
+            "pool": "未进精选"
+          },
+          {
+            "title": "Boston Dynamics：Atlas 新 4 指机械手，13 自由度，为用人类工具（未进精选）",
+            "url": "https://aihot.news/items/mggoqg85igs9ic2se7ec2of1h",
+            "pool": "未进精选"
+          },
+          {
+            "title": "Agility：Digit 与 Fort Robotics 做 Offboard Safety Bridge（X 盯梢）",
+            "url": "https://x.com/agilityrobotics/status/2105647670727410103",
+            "pool": "X 盯梢"
+          }
+        ],
+        "daily": "https://aihot.news/daily/2026-10-02",
+        "xUsed": true
+      }
     }
   ],
   "links": [
@@ -589,6 +652,11 @@
     {
       "source": "Intel",
       "target": "Digest_20261001",
+      "label": "今日"
+    },
+    {
+      "source": "Intel",
+      "target": "Digest_20261002",
       "label": "今日"
     }
   ]
