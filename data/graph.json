@@ -551,6 +551,58 @@
       "status": "pushed",
       "desc": "描述对象：操作策略（Policy）从采数据、训练到评测的生命周期",
       "plain": "具身智能当前最核心的矛盾：数据从哪来、动作怎么表示、做得好不好怎么衡量。图文有海量网上数据，机器人动作数据只能用真机一条条采。"
+    },
+    {
+      "id": "Digest_20261005",
+      "label": "Digest 10-05",
+      "group": "digest",
+      "status": "pushed",
+      "desc": "AIHOT 晨间情报（具身精选空；全量 4 条，未用 X）",
+      "detail": "## Morning digest 2026-10-05（AIHOT）\\n\\n周末精选稀：24h 精选仅 1 条，补最新日报 10-04。\\n\\nFull daily: https://aihot.news/daily/2026-10-04\\n\\n### General AI\\n1. PromptArmor：Databricks Genie 恶意 Skill 可绕过四类控制做钓鱼与数据外泄\\n2. OpenAI 失准报告：内部研究模型评估中利用漏洞打到内部 EDA 机器\\n3. OpenAI 失准报告：内部模型从 Slack 得知可能停机后提前准备重启\\n4. Google 等论文：LLM 汇报工作会隐瞒负面结果，一句 Be honest 大幅改善\\n5. Microsoft ThinkingBox：507 个有状态业务流程、每任务跑 20 次的智能体评测\\n\\n### Embodied\\n1. 现代汽车计划部署 2.5 万台 Atlas，并在美国建年产 3 万台机器人工厂（未进精选）\\n2. 英伟达×鸿海：GB300 母线机器人组装成功率超 95%（未进精选）\\n3. FieldAI 拟融资 7 亿美元，估值 100 亿美元（未进精选）\\n4. NVIDIA IsaacTeleop 重定向引擎：手部/手柄追踪转机器人动作（未进精选）\\n",
+      "resources": {
+        "general": [
+          {
+            "title": "PromptArmor：Databricks Genie 恶意 Skill 可绕过四类控制做钓鱼与数据外泄",
+            "url": "https://aihot.news/items/dfcis3hxowljt45i0bvyi3f0n"
+          },
+          {
+            "title": "OpenAI 失准报告：内部研究模型评估中利用漏洞打到内部 EDA 机器",
+            "url": "https://aihot.news/items/j5whyu39ceixq111sobt4fic1"
+          },
+          {
+            "title": "OpenAI 失准报告：内部模型从 Slack 得知可能停机后提前准备重启",
+            "url": "https://aihot.news/items/s3supi9t3z6gkguckfsz4ygzq"
+          },
+          {
+            "title": "Google 等论文：LLM 汇报工作会隐瞒负面结果，一句 Be honest 大幅改善",
+            "url": "https://aihot.news/items/dkmm9dhgecbuer490f0uqdi3m"
+          },
+          {
+            "title": "Microsoft ThinkingBox：507 个有状态业务流程、每任务跑 20 次的智能体评测",
+            "url": "https://aihot.news/items/gqh4yclcjmaci6uhur56580uh"
+          }
+        ],
+        "embodied": [
+          {
+            "title": "现代汽车计划部署 2.5 万台 Atlas，并在美国建年产 3 万台机器人工厂（未进精选）",
+            "url": "https://aihot.news/items/zh12rj7550crh26m9kd85qg6b"
+          },
+          {
+            "title": "英伟达×鸿海：GB300 母线机器人组装成功率超 95%（未进精选）",
+            "url": "https://aihot.news/items/equpowlufy8xxr56gsgwsp50v"
+          },
+          {
+            "title": "FieldAI 拟融资 7 亿美元，估值 100 亿美元（未进精选）",
+            "url": "https://aihot.news/items/k4kfy69m3rjwrf99zdx1hxr9d"
+          },
+          {
+            "title": "NVIDIA IsaacTeleop 重定向引擎：手部/手柄追踪转机器人动作（未进精选）",
+            "url": "https://aihot.news/items/y548qy0pvn4l9mw2vuq3ghrk6"
+          }
+        ],
+        "daily": "https://aihot.news/daily/2026-10-04",
+        "xUsed": false
+      }
     }
   ],
   "links": [
@@ -678,6 +730,11 @@
       "source": "ThreeQuestions",
       "target": "ActionExec",
       "label": "问2"
+    },
+    {
+      "source": "Intel",
+      "target": "Digest_20261005",
+      "label": "今日"
     }
   ]
 }

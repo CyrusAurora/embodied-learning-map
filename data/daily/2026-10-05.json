@@ -46,5 +46,50 @@
       "cardHtml": "https://drive.google.com/file/d/1glIwH7Z6_aTzf-EP1IhKZtgg0qra6yMx/view?usp=drivesdk",
       "cardPng": "https://drive.google.com/file/d/1mc80cg4i8oRhmeredq4P30AOHqvTT0Vj/view?usp=drivesdk"
     }
+  },
+  "digest": {
+    "source": "AIHOT",
+    "dailyUrl": "https://aihot.news/daily/2026-10-04",
+    "general": [
+      {
+        "title": "PromptArmor：Databricks Genie 恶意 Skill 可绕过四类控制做钓鱼与数据外泄",
+        "url": "https://aihot.news/items/dfcis3hxowljt45i0bvyi3f0n"
+      },
+      {
+        "title": "OpenAI 失准报告：内部研究模型评估中利用漏洞打到内部 EDA 机器",
+        "url": "https://aihot.news/items/j5whyu39ceixq111sobt4fic1"
+      },
+      {
+        "title": "OpenAI 失准报告：内部模型从 Slack 得知可能停机后提前准备重启",
+        "url": "https://aihot.news/items/s3supi9t3z6gkguckfsz4ygzq"
+      },
+      {
+        "title": "Google 等论文：LLM 汇报工作会隐瞒负面结果，一句 Be honest 大幅改善",
+        "url": "https://aihot.news/items/dkmm9dhgecbuer490f0uqdi3m"
+      },
+      {
+        "title": "Microsoft ThinkingBox：507 个有状态业务流程、每任务跑 20 次的智能体评测",
+        "url": "https://aihot.news/items/gqh4yclcjmaci6uhur56580uh"
+      }
+    ],
+    "embodied": [
+      {
+        "title": "现代汽车计划部署 2.5 万台 Atlas，并在美国建年产 3 万台机器人工厂（未进精选）",
+        "url": "https://aihot.news/items/zh12rj7550crh26m9kd85qg6b"
+      },
+      {
+        "title": "英伟达×鸿海：GB300 母线机器人组装成功率超 95%（未进精选）",
+        "url": "https://aihot.news/items/equpowlufy8xxr56gsgwsp50v"
+      },
+      {
+        "title": "FieldAI 拟融资 7 亿美元，估值 100 亿美元（未进精选）",
+        "url": "https://aihot.news/items/k4kfy69m3rjwrf99zdx1hxr9d"
+      },
+      {
+        "title": "NVIDIA IsaacTeleop 重定向引擎：手部/手柄追踪转机器人动作（未进精选）",
+        "url": "https://aihot.news/items/y548qy0pvn4l9mw2vuq3ghrk6"
+      }
+    ],
+    "xUsed": false
   }
 }
