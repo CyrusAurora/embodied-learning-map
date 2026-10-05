@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-05",
+  "learning": {
+    "id": "A1",
+    "status": "learning",
+    "note": "9/24–10/2 连续 7 个工作日无验收，同阶段降密度：只推 Guide §1 开头两段主线三问；董云龙 PDF 404 已撤；不进 A2",
+    "goal": "说出 Guide 主线三问（数据从哪来、动作怎么表示、做得好不好怎么衡量），并把董云龙四块挂到三问上。",
+    "points": [
+      {
+        "term": "Embodied AI",
+        "plain": "Guide 定义：基于物理实体进行感知和行动的智能系统，靠和环境交互获取信息、做决策、执行动作。"
+      },
+      {
+        "term": "Policy",
+        "plain": "从「看到什么」到「做什么动作」的映射，也就是平时说的「模型」。三问的描述对象是它的生命周期。"
+      },
+      {
+        "term": "数据从哪来",
+        "plain": "动作数据网上没有，要人用 Teleoperation（遥操作）在真机上录 Demonstration（演示）。Guide §5 数据集、§2 第一步。"
+      },
+      {
+        "term": "动作怎么表示",
+        "plain": "模型输出连续、有物理后果的动作；输出格式定了模型结构跟着定，VLA 是一种答法。Guide §4。"
+      },
+      {
+        "term": "做得好不好怎么衡量",
+        "plain": "统一任务和环境里算成功率，对照榜单；Guide RoboTwin 教程中 ACT 在 demo_clean 下官方约 56%。Guide §5 Benchmark、§2 评测。"
+      },
+      {
+        "term": "三问 × 董云龙四块",
+        "plain": "数据引导答问1，动作执行答问2，场景理解是动作前的「看」，World Model 帮动手前推演；四块没单列评测，问3 去 §5 补。"
+      }
+    ],
+    "links": [
+      {
+        "title": "Embodied-AI-Guide §1 Start From Here",
+        "url": "https://github.com/TianxingChen/Embodied-AI-Guide#start"
+      },
+      {
+        "title": "董云龙：具身智能基础技术路线（Bilibili）",
+        "url": "https://www.bilibili.com/video/BV1d5ukedEsi"
+      }
+    ],
+    "drive": {
+      "recommend": "https://drive.google.com/file/d/1qpnqK_o6QoTaExE-sSBb1-LnxrOdwS9C/view?usp=drivesdk",
+      "cardHtml": "https://drive.google.com/file/d/1glIwH7Z6_aTzf-EP1IhKZtgg0qra6yMx/view?usp=drivesdk",
+      "cardPng": "https://drive.google.com/file/d/1mc80cg4i8oRhmeredq4P30AOHqvTT0Vj/view?usp=drivesdk"
+    }
+  }
+}
