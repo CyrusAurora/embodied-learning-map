@@ -26,10 +26,11 @@
       "label": "A1 认知：Guide 主线三问 + 董云龙四块",
       "group": "day",
       "status": "learning",
-      "desc": "§1+§3 + 董云龙基础技术路线（2026-10-05 降密度续推：连续 7 个工作日无验收，改推 §1 主线三问；董云龙 PDF 链接 404 已撤）",
+      "desc": "§1+§3 + 董云龙基础技术路线（10-05 降密度推 §1 主线三问；10-06 换角度推 §1.4：数据／评测／本体三层未收敛；连续 8 个工作日无验收）",
       "goal": "说出 Guide 主线三问（数据从哪来、动作怎么表示、做得好不好怎么衡量），并把董云龙四块挂到三问上。",
       "points": [
         "Guide 主线三问：数据从哪来｜动作怎么表示｜做得好不好怎么衡量（对象＝Policy 生命周期）",
+        "未收敛三层：数据｜评测｜本体；2026 瓶颈从模型架构转向数据配方与评测协议（Guide §1.4）",
         "Embodied AI：环境理解→交互→推理→规划执行的物理世界系统",
         "LLM as General Planner：自然语言意图→可调用规划代码（预置 API）",
         "四块：场景理解｜数据引导｜动作执行｜World Model",
@@ -47,6 +48,10 @@
         {
           "title": "董云龙：具身智能基础技术路线（Bilibili）",
           "url": "https://www.bilibili.com/video/BV1d5ukedEsi"
+        },
+        {
+          "title": "选看｜1,228 篇 VLA 论文里的数据问题（Guide §3.6）",
+          "url": "https://labelstud.io/blog/vla-robot-data-problem/"
         }
       ],
       "detail": "## A1 学习目标\n弄清具身智能是什么系统，以及董云龙路线里四块技术各自在解决什么问题。\n\n## 知识点\n0. **Guide 主线三问**（描述对象：一个操作策略 Policy 从采数据、训练到评测的生命周期）：数据从哪来（动作数据网上没有，靠 Teleoperation 真机采 Demonstration）｜动作怎么表示（连续、有物理后果的动作输出，VLA 是一种答法）｜做得好不好怎么衡量（统一任务上算成功率、对照 Benchmark 榜单）。\n1. **Embodied AI**：一套把环境理解、智能交互、认知推理、规划执行串在一起的系统，要在物理世界里感知并行动。\n2. **LLM as General Planner**：大模型靠常识和推理，把人的自然语言意图转成可调用的机器人规划代码（通过预置 API，如移动、抓取）。\n3. **基础技术四块**：场景理解｜数据引导｜动作执行｜世界模型。\n4. **场景理解**：用分割（如 SAM）、开放词表检测、多模态 Grounding，把「看到的场景」变成机器能用的物体／像素级表示。\n5. **数据引导**：策略要数据；来源包括人类视频模仿、轻量采集（如 UMI）、重型遥操作、生成式仿真扩增（如 MimicGen／RoboGen）。\n6. **动作执行**：把感知变成电机动作。常见路有生成式模仿学习（ACT、Diffusion Policy），以及基于 Affordance 或 LLM 规划／语言纠错来出动作。\n7. **World Model**：学的是在当前状态做某个动作之后，下一状态大概怎样，用来想象交互后果，再辅助操作。\n8. **大脑／小脑失衡**：语言决策侧进步快，灵巧运动控制侧仍短板。\n\n## 原始链接\n- Guide §1：https://github.com/TianxingChen/Embodied-AI-Guide#start\n- 董云龙 Bilibili：https://www.bilibili.com/video/BV1d5ukedEsi\n"
@@ -603,6 +608,14 @@
         "daily": "https://aihot.news/daily/2026-10-04",
         "xUsed": false
       }
+    },
+    {
+      "id": "NotConverged",
+      "label": "具身未收敛三层",
+      "group": "concept",
+      "status": "pushed",
+      "desc": "描述对象：整个具身智能行业的技术路线状态（Guide §1.4）",
+      "plain": "相比语言模型，具身智能在数据、评测、本体三层都没有公认答案；2026 年瓶颈从模型架构转向数据配方与评测协议。真实系统是传统机器人学（稳定可控的底座）与学习方法（泛化）的混合。"
     }
   ],
   "links": [
@@ -735,6 +748,16 @@
       "source": "Intel",
       "target": "Digest_20261005",
       "label": "今日"
+    },
+    {
+      "source": "A1",
+      "target": "NotConverged",
+      "label": "§1.4"
+    },
+    {
+      "source": "NotConverged",
+      "target": "ThreeQuestions",
+      "label": "数据层=问1·评测层=问3"
     }
   ]
 }

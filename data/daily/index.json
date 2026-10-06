@@ -1,6 +1,11 @@
 {
   "dates": [
     {
+      "date": "2026-10-06",
+      "file": "2026-10-06.json",
+      "label": "A1 换角度：具身还没收敛的三层"
+    },
+    {
       "date": "2026-10-05",
       "file": "2026-10-05.json",
       "label": "A1 降密度：Guide 主线三问 + AIHOT digest"

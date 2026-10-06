@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-06",
+  "learning": {
+    "id": "A1",
+    "status": "learning",
+    "note": "9/24–10/5 连续 8 个工作日无验收；同阶段换角度：Guide §1.4 新人常见问题最后两问（与传统机器人学关系、入场是否太晚）；不进 A2",
+    "goal": "说出 Guide 认为具身智能在哪三层还没有公认答案（数据、评测、本体），以及 2026 年瓶颈从模型架构转向数据配方与评测协议。",
+    "points": [
+      {
+        "term": "传统机器人学 × Embodied AI",
+        "plain": "描述对象：一台机器人系统内部的分工。传统机器人学管几何、动力学与控制，保证稳定可控；具身智能用学习方法补感知复杂世界、泛化到新任务。真实系统几乎都是二者混合。"
+      },
+      {
+        "term": "收敛",
+        "plain": "描述对象：整个行业技术路线。对「该怎么做」形成公认答案；相比语言模型，具身智能在数据、评测、本体三层都还没有。"
+      },
+      {
+        "term": "本体（Embodiment）",
+        "plain": "机器人的身体本身：人形、轮式、机械臂，夹爪还是灵巧手，形态未定型。"
+      },
+      {
+        "term": "瓶颈转移",
+        "plain": "Guide：2026 年公认瓶颈从模型架构转向数据配方（data recipe）与评测协议（evaluation protocol）；不依赖超大算力的研究空间依然很多。"
+      }
+    ],
+    "links": [
+      {
+        "title": "Embodied-AI-Guide §1 Start From Here（展开 1.4 新人常见问题）",
+        "url": "https://github.com/TianxingChen/Embodied-AI-Guide#start"
+      },
+      {
+        "title": "选看｜1,228 篇 VLA 论文里的数据问题（Guide §3.6）",
+        "url": "https://labelstud.io/blog/vla-robot-data-problem/"
+      }
+    ],
+    "drive": {
+      "recommend": "https://drive.google.com/file/d/1JAMADbsk20oq6l8oGBKndwZwzmJLZeJ1/view?usp=drivesdk",
+      "cardHtml": "https://drive.google.com/file/d/1Zk8cC4j41uTaNKri770Km-jod4cZzTYg/view?usp=drivesdk",
+      "cardPng": "https://drive.google.com/file/d/1yT0wFIOQdQ0hJsui4jE9cKbH65UHccY0/view?usp=drivesdk"
+    }
+  }
+}
