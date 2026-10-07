@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-07",
+  "learning": {
+    "id": "A1",
+    "status": "learning",
+    "note": "9/24–10/6 连续 9 个工作日无验收；同阶段换角度：Guide §1.3 术语速查表挑 6 词挂到主线三问；验收降到回三个数字；不进 A2",
+    "goal": "碰到 Policy、Teleoperation、Demonstration、IL/BC、VLA、Sim2Real Gap，能说出它落在主线三问的哪一问。",
+    "points": [
+      {
+        "term": "Policy（策略）",
+        "plain": "描述对象：操作策略本身。从观测到动作的映射，也就是平时说的「模型」；三问都围着它转。"
+      },
+      {
+        "term": "Teleoperation（遥操作）",
+        "plain": "人通过手柄、动捕或主从设备操控机器人，是真机数据采集的主要手段。属问 1。"
+      },
+      {
+        "term": "Demonstration（演示 / 轨迹）",
+        "plain": "一次完整任务执行记录，含观测、动作与时间戳。属问 1（数据本身）。"
+      },
+      {
+        "term": "IL / BC（模仿学习 / 行为克隆）",
+        "plain": "用监督学习让 Policy 照着人类演示学；把问 1 的数据变成 Policy 的那一步。"
+      },
+      {
+        "term": "VLA / VA",
+        "plain": "VLA 看图听语言指令直接输出动作；VA 只看图不接语言，任务固定时更轻更快。属问 2。"
+      },
+      {
+        "term": "Sim2Real Gap",
+        "plain": "仿真与真实在物理、渲染、噪声上的差异，让策略到真机掉点。属问 3，也牵动问 1。"
+      }
+    ],
+    "links": [
+      {
+        "title": "Embodied-AI-Guide §1 Start From Here（展开 1.3 术语速查表）",
+        "url": "https://github.com/TianxingChen/Embodied-AI-Guide#start"
+      },
+      {
+        "title": "选看｜董云龙《具身智能基础技术路线》（Guide §3.1）",
+        "url": "https://www.bilibili.com/video/BV1d5ukedEsi"
+      }
+    ],
+    "drive": {
+      "recommend": "https://drive.google.com/file/d/1LnVXCjuEOOdQYj_tEzAma3kKV1qxeq4K/view?usp=drivesdk",
+      "cardHtml": "https://drive.google.com/file/d/1g8zh3E53RVNyLqJZLF_zbrk36p_ORvlI/view?usp=drivesdk",
+      "cardPng": "https://drive.google.com/file/d/1pMnvpgUAti8Q4IOYtQIVbNPRundUdLAV/view?usp=drivesdk"
+    }
+  }
+}

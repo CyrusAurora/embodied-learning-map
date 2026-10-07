@@ -26,7 +26,7 @@
       "label": "A1 认知：Guide 主线三问 + 董云龙四块",
       "group": "day",
       "status": "learning",
-      "desc": "§1+§3 + 董云龙基础技术路线（10-05 降密度推 §1 主线三问；10-06 换角度推 §1.4：数据／评测／本体三层未收敛；连续 8 个工作日无验收）",
+      "desc": "§1+§3 + 董云龙基础技术路线（10-05 降密度推 §1 主线三问；10-06 推 §1.4 三层未收敛；10-07 推 §1.3 术语挂三问；连续 9 个工作日无验收）",
       "goal": "说出 Guide 主线三问（数据从哪来、动作怎么表示、做得好不好怎么衡量），并把董云龙四块挂到三问上。",
       "points": [
         "Guide 主线三问：数据从哪来｜动作怎么表示｜做得好不好怎么衡量（对象＝Policy 生命周期）",
@@ -616,6 +616,14 @@
       "status": "pushed",
       "desc": "描述对象：整个具身智能行业的技术路线状态（Guide §1.4）",
       "plain": "相比语言模型，具身智能在数据、评测、本体三层都没有公认答案；2026 年瓶颈从模型架构转向数据配方与评测协议。真实系统是传统机器人学（稳定可控的底座）与学习方法（泛化）的混合。"
+    },
+    {
+      "id": "TermMap",
+      "label": "术语挂到三问",
+      "group": "concept",
+      "status": "pushed",
+      "desc": "描述对象：一个操作策略（Policy）从采数据、训练到评测的生命周期（Guide §1.3 术语速查表）",
+      "plain": "Policy＝从观测到动作的映射；Teleoperation/Demonstration 属问1 数据从哪来；IL/BC 把演示数据训成 Policy；VLA（看图听指令出动作）/VA 属问2 动作怎么表示；Sim2Real Gap（仿真到真机掉点）属问3 做得好不好怎么衡量。"
     }
   ],
   "links": [
@@ -758,6 +766,16 @@
       "source": "NotConverged",
       "target": "ThreeQuestions",
       "label": "数据层=问1·评测层=问3"
+    },
+    {
+      "source": "A1",
+      "target": "TermMap",
+      "label": "§1.3"
+    },
+    {
+      "source": "TermMap",
+      "target": "ThreeQuestions",
+      "label": "术语定位"
     }
   ]
 }
