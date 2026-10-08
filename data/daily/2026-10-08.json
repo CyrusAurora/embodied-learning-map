@@ -38,5 +38,58 @@
       "cardHtml": "https://drive.google.com/file/d/1xJcBwwHKVVOR6xelTHv8VwgYiDuHUP82/view?usp=drivesdk",
       "cardPng": "https://drive.google.com/file/d/1A4eFM6lDbPe8Q-gYojsLNnwHxmLEIfuh/view?usp=drivesdk"
     }
+  },
+  "digest": {
+    "source": "AIHOT",
+    "dailyUrl": "https://aihot.news/daily/2026-10-08",
+    "general": [
+      {
+        "title": "Anthropic 发布 Claude Haiku 5.5，运行成本平均降低约 75%",
+        "url": "https://aihot.news/items/lqyhqdf0u7iksn5ydnpyhk81x"
+      },
+      {
+        "title": "GPT-6 Luna Decisions 上架 OpenRouter",
+        "url": "https://aihot.news/items/x40bi9csoomsdaflejehop22y"
+      },
+      {
+        "title": "Microsoft Research Asia 开源 Agent Lightning v1.0",
+        "url": "https://aihot.news/items/t9wypjd9cbb42ttuq7vrpp07l"
+      },
+      {
+        "title": "vLLM 详解 DeepSeek-V4.1-Flash 优化：Agent 场景吞吐提升 5 倍",
+        "url": "https://aihot.news/items/h8ldh8orhiz1tbad38w4e6cpn"
+      },
+      {
+        "title": "NVIDIA 与 Microsoft 推出 RTX Spark 平台，让 AI Agent 落地 Windows PC",
+        "url": "https://aihot.news/items/t02toac3ii8mp1lxzl4blewdd"
+      },
+      {
+        "title": "Anthropic 为 Claude Max 和 Team 推出月度 Platform API 额度",
+        "url": "https://aihot.news/items/ponkn6n046yorr5pg1yv3yjm5"
+      }
+    ],
+    "embodied": [
+      {
+        "title": "波士顿动力任命亚马逊前高管 Rohit Prasad 为 CEO（未进精选）",
+        "url": "https://aihot.news/items/ru6gchtobo0dc0urvzjkmzrug"
+      },
+      {
+        "title": "Mecka 完成 6000 万美元 B 轮（未进精选）",
+        "url": "https://aihot.news/items/ir20j6c4k9fe2270ncsnzffq6"
+      },
+      {
+        "title": "Robbyant（蚂蚁灵波）首届具身智能挑战赛启动（未进精选）",
+        "url": "https://aihot.news/items/xsgwp6p0g4o9caq1hxwkhqxks"
+      },
+      {
+        "title": "前字节实习生田柯宇做世界模型创业，估值 2 亿美元（未进精选）",
+        "url": "https://aihot.news/items/eipq49s6b49rjs0l81q04bh2m"
+      },
+      {
+        "title": "Jim Fan：人类会先解出黎曼猜想，再通过物理图灵测试（未进精选）",
+        "url": "https://aihot.news/items/e7g4wqtsex46g5vl2px40k9v0"
+      }
+    ],
+    "xUsed": false
   }
 }
