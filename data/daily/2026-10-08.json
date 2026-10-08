@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-08",
+  "learning": {
+    "id": "A1",
+    "status": "learning",
+    "note": "9/24–10/7 连续 10 个工作日无验收；同阶段换角度：Guide §1.3 Manipulation/Locomotion + §1.4 第4问，两列对照 IL vs RL；验收降到回两个词；不进 A2",
+    "goal": "看到一段机器人视频，能判断它是 Manipulation 还是 Locomotion，并说出这条线主要靠 IL 还是 RL。",
+    "points": [
+      {
+        "term": "Manipulation（操作）",
+        "plain": "描述对象：机器人要完成的任务类型。用手臂改变环境，如抓杯子、叠毛巾；主要靠 IL/BC，数据是真机 Teleoperation 演示。"
+      },
+      {
+        "term": "Locomotion（运动 / 移动）",
+        "plain": "描述对象：机器人要完成的任务类型。用腿或轮子移动本体；主要靠仿真里的 RL，再过 Sim2Real 上真机。"
+      },
+      {
+        "term": "IL / BC（模仿学习 / 行为克隆）",
+        "plain": "描述对象：训练 Policy 的方法。照着人类演示用监督学习学动作。"
+      },
+      {
+        "term": "RL（强化学习）",
+        "plain": "描述对象：训练 Policy 的方法。和环境反复交互，按奖励信号改进 Policy。"
+      }
+    ],
+    "links": [
+      {
+        "title": "Embodied-AI-Guide §1 Start From Here（展开 1.3 术语速查表与 1.4 第4问）",
+        "url": "https://github.com/TianxingChen/Embodied-AI-Guide#start"
+      },
+      {
+        "title": "选看｜董云龙《具身智能基础技术路线》（Guide §3.1）",
+        "url": "https://www.bilibili.com/video/BV1d5ukedEsi"
+      }
+    ],
+    "drive": {
+      "recommend": "https://drive.google.com/file/d/17gfDys2qv9Um7UPjKrrbXyDX5Zx1l9AS/view?usp=drivesdk",
+      "cardHtml": "https://drive.google.com/file/d/1xJcBwwHKVVOR6xelTHv8VwgYiDuHUP82/view?usp=drivesdk",
+      "cardPng": "https://drive.google.com/file/d/1A4eFM6lDbPe8Q-gYojsLNnwHxmLEIfuh/view?usp=drivesdk"
+    }
+  }
+}

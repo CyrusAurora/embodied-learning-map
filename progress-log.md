@@ -1,4 +1,5 @@
 # progress-log
+- 2026-10-08 08:45：无反馈（9/24–10/7 连续 10 个工作日未交验收）。同阶段换角度：A1 推 Guide §1.3 Manipulation／Locomotion + §1.4 第 4 问，两列对照（Manipulation 靠 IL/BC＋真机遥操作演示；Locomotion 靠仿真 RL＋Sim2Real）；验收降到回两个词；选看董云龙 B 站视频。已上传 Drive 06/07；graph 新增 TwoLines 节点。A1 仍 learning；不进 A2。
 - 2026-10-07 08:40：无反馈（9/24–10/6 连续 9 个工作日未交验收）。同阶段换角度：A1 推 Guide §1.3 术语速查表，挑 Policy／Teleoperation／Demonstration／IL-BC／VLA-VA／Sim2Real Gap 挂到主线三问；验收降到回三个数字；选看董云龙 B 站视频。已上传 Drive 06/07；graph 新增 TermMap 节点。A1 仍 learning；不进 A2。
 - 2026-10-06 08:50：无反馈（9/24–10/5 连续 8 个工作日未交验收，10/5 主线三问与沉默原因追问均未回）。同阶段换角度：A1 推 Guide §1.4 新人常见问题最后两问（具身 vs 传统机器人学；数据／评测／本体三层未收敛，瓶颈转向数据配方与评测协议），选看 §3.6 VLA 数据问题博客。已上传 Drive 06/07；graph 新增 NotConverged 概念节点。A1 仍 learning；不进 A2。
 - 2026-10-05 08:40：无反馈（9/24–10/2 连续 7 个工作日未交验收）。同阶段降密度：A1 改推 Guide §1 开头主线三问（数据／动作表示／评测）+ 董云龙四块挂靠；发现董云龙 PDF 链接 404（Guide 现只列 B 站），已从 graph／daily 撤掉。附苏格拉底追问沉默原因（A 太长／B 不对胃口／C 暂停／D 看了没回）。已上传 Drive 06/07。A1 仍 learning；不进 A2。
