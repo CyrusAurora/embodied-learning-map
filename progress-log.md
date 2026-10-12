@@ -1,4 +1,5 @@
 # progress-log
+- 2026-10-12 08:40：无反馈（9/24 起连续多个工作日未交验收；至 10/8 已记 11 个工作日；10/9 例行失败未送达）。同阶段换角度：A1 推 Guide §1.1 一条主线＋一张全景图（§3–§7 五格书架）＋§1.2「想快速了解行业与选题→§3」；验收降到回五个短语；选看董云龙 B 站视频。已上传 Drive 06/07；graph 新增 GuideShelf 节点。A1 仍 learning；不进 A2。
 - 2026-10-08 08:45：无反馈（9/24–10/7 连续 10 个工作日未交验收）。同阶段换角度：A1 推 Guide §1.3 Manipulation／Locomotion + §1.4 第 4 问，两列对照（Manipulation 靠 IL/BC＋真机遥操作演示；Locomotion 靠仿真 RL＋Sim2Real）；验收降到回两个词；选看董云龙 B 站视频。已上传 Drive 06/07；graph 新增 TwoLines 节点。A1 仍 learning；不进 A2。
 - 2026-10-07 08:40：无反馈（9/24–10/6 连续 9 个工作日未交验收）。同阶段换角度：A1 推 Guide §1.3 术语速查表，挑 Policy／Teleoperation／Demonstration／IL-BC／VLA-VA／Sim2Real Gap 挂到主线三问；验收降到回三个数字；选看董云龙 B 站视频。已上传 Drive 06/07；graph 新增 TermMap 节点。A1 仍 learning；不进 A2。
 - 2026-10-06 08:50：无反馈（9/24–10/5 连续 8 个工作日未交验收，10/5 主线三问与沉默原因追问均未回）。同阶段换角度：A1 推 Guide §1.4 新人常见问题最后两问（具身 vs 传统机器人学；数据／评测／本体三层未收敛，瓶颈转向数据配方与评测协议），选看 §3.6 VLA 数据问题博客。已上传 Drive 06/07；graph 新增 NotConverged 概念节点。A1 仍 learning；不进 A2。
