@@ -705,6 +705,45 @@
       "status": "pushed",
       "desc": "描述对象：Embodied-AI-Guide 知识库的组织方式（§1.1 一条主线 + 一张全景图）",
       "plain": "主线=§2 RoboTwin「数据→策略→评测」生命周期（后置）；全景图=§3 认知资料｜§4 算法｜§5 基建（仿真/Benchmark/数据集）｜§6 控制｜§7 硬件。产品岗可从 §3 扫起。"
+    },
+    {
+      "id": "Digest_20261012",
+      "label": "Digest 10-12",
+      "group": "digest",
+      "status": "pushed",
+      "desc": "AIHOT 晨间情报（未耗 X；具身 3 条均未进精选）",
+      "detail": "## Morning digest 2026-10-12（AIHOT；未耗 X）\n\nDaily main: GPT-6.1 Sol 在 Codex 与 Work 中默认上下文长度提升至 500k\nHeadline: https://aihot.news/items/z54sznsd0r2teb6gqyvwu4nc2\n\nFull daily: https://aihot.news/daily/2026-10-12\n\n### General AI\n1. 从Brandon Thomas用Claude Opus 5.5开源重写Adobe全家桶看AI逆向一切趋势\n2. GPT-6.1 Sol 在 Codex 与 Work 中默认上下文长度提升至 500k\n\n### Embodied\n1. 宇树科技王兴兴：过去十几年我犯的最大错误就是对 AI 还不够相信（未进精选）\n2. 星海图 LEMO 双臂开发平台开放订购（未进精选）\n3. 杨立昆：下一代 AI 须理解现实世界，世界模型将取代大语言模型（未进精选）\n",
+      "resources": {
+        "general": [
+          {
+            "title": "从Brandon Thomas用Claude Opus 5.5开源重写Adobe全家桶看AI逆向一切趋势",
+            "url": "https://aihot.news/items/hvxwaxeyj6i82xv44ef4ce6fz"
+          },
+          {
+            "title": "GPT-6.1 Sol 在 Codex 与 Work 中默认上下文长度提升至 500k",
+            "url": "https://aihot.news/items/z54sznsd0r2teb6gqyvwu4nc2"
+          }
+        ],
+        "embodied": [
+          {
+            "title": "宇树科技王兴兴：过去十几年我犯的最大错误就是对 AI 还不够相信",
+            "url": "https://aihot.news/items/ifb7jnvz2xvy1atz9v2mzk432",
+            "pool": "未进精选"
+          },
+          {
+            "title": "星海图 LEMO 双臂开发平台开放订购",
+            "url": "https://aihot.news/items/aa8mlz8jz8awg9lxs1cp9ic28",
+            "pool": "未进精选"
+          },
+          {
+            "title": "杨立昆：下一代 AI 须理解现实世界，世界模型将取代大语言模型",
+            "url": "https://aihot.news/items/cyji7m6eeuf4xo7nwmv7gocbc",
+            "pool": "未进精选"
+          }
+        ],
+        "daily": "https://aihot.news/daily/2026-10-12",
+        "xUsed": false
+      }
     }
   ],
   "links": [
@@ -882,6 +921,11 @@
       "source": "GuideShelf",
       "target": "A_Cognition",
       "label": "全景图入口"
+    },
+    {
+      "source": "Intel",
+      "target": "Digest_20261012",
+      "label": "今日"
     }
   ]
 }

@@ -54,5 +54,34 @@
       "cardHtml": "https://drive.google.com/file/d/1DVcEp8Uc6B7ouiHwgnceriql_F7Sbl5o/view?usp=drivesdk",
       "cardPng": "https://drive.google.com/file/d/1jLFMNshhIOXEFhSUTsnULTkIgc2HmK2D/view?usp=drivesdk"
     }
+  },
+  "digest": {
+    "source": "AIHOT",
+    "dailyUrl": "https://aihot.news/daily/2026-10-12",
+    "general": [
+      {
+        "title": "从Brandon Thomas用Claude Opus 5.5开源重写Adobe全家桶看AI逆向一切趋势",
+        "url": "https://aihot.news/items/hvxwaxeyj6i82xv44ef4ce6fz"
+      },
+      {
+        "title": "GPT-6.1 Sol 在 Codex 与 Work 中默认上下文长度提升至 500k",
+        "url": "https://aihot.news/items/z54sznsd0r2teb6gqyvwu4nc2"
+      }
+    ],
+    "embodied": [
+      {
+        "title": "宇树科技王兴兴：过去十几年我犯的最大错误就是对 AI 还不够相信（未进精选）",
+        "url": "https://aihot.news/items/ifb7jnvz2xvy1atz9v2mzk432"
+      },
+      {
+        "title": "星海图 LEMO 双臂开发平台开放订购（未进精选）",
+        "url": "https://aihot.news/items/aa8mlz8jz8awg9lxs1cp9ic28"
+      },
+      {
+        "title": "杨立昆：下一代 AI 须理解现实世界，世界模型将取代大语言模型（未进精选）",
+        "url": "https://aihot.news/items/cyji7m6eeuf4xo7nwmv7gocbc"
+      }
+    ],
+    "xUsed": false
   }
 }
