@@ -50,5 +50,50 @@
       "cardHtml": "https://drive.google.com/file/d/1iLCPlNdev2unAtoAC5STdBey42ZP67IA/view?usp=drivesdk",
       "cardPng": "https://drive.google.com/file/d/1WIKAgd1fEWW1icfejTIYoUw5ICs6UhFX/view?usp=drivesdk"
     }
+  },
+  "digest": {
+    "source": "AIHOT",
+    "dailyUrl": "https://aihot.news/daily/2026-10-13",
+    "general": [
+      {
+        "title": "Meta 发布 Muse Wonder 和 Muse Wonder Full，Artificial Analysis 实测智能水平较前代显著提升",
+        "url": "https://aihot.news/items/v3pogrzxrk9oba4blox86d0w8"
+      },
+      {
+        "title": "Anthropic 强化针对蒸馏攻击的防御， reasoning token 提取量下降 10 到 100 倍",
+        "url": "https://aihot.news/items/lwchujhujmc1tdor61dn39irl"
+      },
+      {
+        "title": "xAI 推出 The X Subscription 整合 Grok、Grok Bot、Cursor 与 X Premium",
+        "url": "https://aihot.news/items/uy4hvoyz7fwtyycpu0p62dudn"
+      },
+      {
+        "title": "微软发布自研芯片 Maia 300 并将大规模扩展 Maia 推理部署",
+        "url": "https://aihot.news/items/zqlqer8tnl7ejg2ow3xoq7b9q"
+      },
+      {
+        "title": "Anthropic 研究：小型 AI 模型可能接近在 IoT 设备上自主复制",
+        "url": "https://aihot.news/items/emc0djmqlomn6b5whge285x7l"
+      },
+      {
+        "title": "AWS 提出 priming 方法，可将预训练 Transformer 改造成混合状态空间架构",
+        "url": "https://aihot.news/items/w2408fxlrc7tc7nt3ivrzh9ys"
+      }
+    ],
+    "embodied": [
+      {
+        "title": "Amazon 机器人数量超百万，人类员工的下一步是什么（未进精选）",
+        "url": "https://aihot.news/items/p14ygv32pprdjl6pmwdw7o0ru"
+      },
+      {
+        "title": "湾区机器人公司速查图（未进精选）",
+        "url": "https://aihot.news/items/vod35e7hnrb5q426cf3yq0rhr"
+      },
+      {
+        "title": "影视飓风Tim演示字节最新世界模型（未进精选）",
+        "url": "https://aihot.news/items/o7s4ulrahgg442yvhk861xpdq"
+      }
+    ],
+    "xUsed": false
   }
 }
