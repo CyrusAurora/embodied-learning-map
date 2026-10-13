@@ -1,6 +1,11 @@
 {
   "dates": [
     {
+      "date": "2026-10-13",
+      "file": "2026-10-13.json",
+      "label": "A1 续推"
+    },
+    {
       "date": "2026-10-12",
       "file": "2026-10-12.json",
       "label": "A1 换角度：Guide 书架六大格 + AIHOT digest"
