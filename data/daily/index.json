@@ -1,6 +1,11 @@
 {
   "dates": [
     {
+      "date": "2026-10-14",
+      "file": "2026-10-14.json",
+      "label": "A1 换角度：Guide §1.2 按背景选起点"
+    },
+    {
       "date": "2026-10-13",
       "file": "2026-10-13.json",
       "label": "A1 换角度：Guide §3 六类信息源 + AIHOT digest"
