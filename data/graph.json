@@ -816,6 +816,66 @@
       "status": "pushed",
       "desc": "描述对象：读者——不同背景的人在 Embodied-AI-Guide 里该从哪一章起读（Guide §1.2 学习路线建议）",
       "plain": "新手→§2 RoboTwin 动手；CV/NLP/深度学习→§4（重点 Robot Learning 与 VLA）；自动化/机器人学→§3 版图再 §4 补学习与决策；硬件/嵌入式→§7→§6→§2；想快速了解行业与选题→§3（3.1 方法论→3.5 论文列表→3.6 年度趋势）。最后一行是 A 阶段停在 §1+§3 的依据。"
+    },
+    {
+      "id": "Digest_20261014",
+      "label": "Digest 10-14",
+      "group": "digest",
+      "status": "pushed",
+      "desc": "AIHOT 晨间情报（未耗 X；具身 4 条均未进精选）",
+      "detail": "## Morning digest 2026-10-14（AIHOT；未耗 X）\n\nDaily main: Google 发布 Gemini 4 Argon：面向复杂工程与科研任务的前沿模型\nHeadline: https://aihot.news/items/smxxtw5ca2c9jscojk4ppe5hf\n\nFull daily: https://aihot.news/daily/2026-10-14\n\n### General AI\n1. Google 发布 Gemini 4 Argon：面向复杂工程与科研任务的前沿模型\n2. Gemini 4 Argon 正式 GA，智能指数追平 GPT-6 Astra，Cost per Task 仅为 60%\n3. Meta Muse Wonder (Max) 进入 Arena 榜单：WebDev 第15、文本第2\n4. Character.AI 成立五年后申请 Chapter 11 破产，部分资产以 2000 万美元出售给 Disney\n5. Prime Intellect 收购 Moondream，联合创始人加入主导推理与多模态\n6. Liquid AI 发布 LFM2.5-24B-A2B 端侧推理模型\n\n### Embodied\n1. Google 发布 Gemini 4 Argon 具身推理模型，ERQA 基准得分 87%（未进精选）\n2. Physical Intelligence 发布 Pi API beta 版并向更多团队开放（未进精选）\n3. Dyna Robotics 联合创始人 Jason Ma 深谈 Dyna-2 world-action 模型与小时级自主机器人（未进精选）\n4. 蚂蚁 inclusionAI 发布 BiDex-100 双臂灵巧操作基准（未进精选）\n",
+      "resources": {
+        "general": [
+          {
+            "title": "Google 发布 Gemini 4 Argon：面向复杂工程与科研任务的前沿模型",
+            "url": "https://aihot.news/items/smxxtw5ca2c9jscojk4ppe5hf"
+          },
+          {
+            "title": "Gemini 4 Argon 正式 GA，智能指数追平 GPT-6 Astra，Cost per Task 仅为 60%",
+            "url": "https://aihot.news/items/w2fkb8pssvuc0mtttxnufchc9"
+          },
+          {
+            "title": "Meta Muse Wonder (Max) 进入 Arena 榜单：WebDev 第15、文本第2",
+            "url": "https://aihot.news/items/ob6ryetyialrnqhyjusr2s1iz"
+          },
+          {
+            "title": "Character.AI 成立五年后申请 Chapter 11 破产，部分资产以 2000 万美元出售给 Disney",
+            "url": "https://aihot.news/items/vwu0li2nl5hztqeztnq8b5udc"
+          },
+          {
+            "title": "Prime Intellect 收购 Moondream，联合创始人加入主导推理与多模态",
+            "url": "https://aihot.news/items/rruqd7cz78jq6l889kjp56jlz"
+          },
+          {
+            "title": "Liquid AI 发布 LFM2.5-24B-A2B 端侧推理模型",
+            "url": "https://aihot.news/items/j0hjfg7ioz2gs0s8msqnafpjj"
+          }
+        ],
+        "embodied": [
+          {
+            "title": "Google 发布 Gemini 4 Argon 具身推理模型，ERQA 基准得分 87%",
+            "url": "https://aihot.news/items/vawcjmwqshdh3pyewxyhc1mv2",
+            "pool": "未进精选"
+          },
+          {
+            "title": "Physical Intelligence 发布 Pi API beta 版并向更多团队开放",
+            "url": "https://aihot.news/items/k2vhnbcayj1q6ij6a4qkuatui",
+            "pool": "未进精选"
+          },
+          {
+            "title": "Dyna Robotics 联合创始人 Jason Ma 深谈 Dyna-2 world-action 模型与小时级自主机器人",
+            "url": "https://aihot.news/items/gglj5qab0zuuwyjxomay5hppr",
+            "pool": "未进精选"
+          },
+          {
+            "title": "蚂蚁 inclusionAI 发布 BiDex-100 双臂灵巧操作基准",
+            "url": "https://aihot.news/items/vxpna50cveggwwsomy4awl41m",
+            "pool": "未进精选"
+          }
+        ],
+        "daily": "https://aihot.news/daily/2026-10-14",
+        "xUsed": false
+      }
     }
   ],
   "links": [
@@ -1028,6 +1088,11 @@
       "source": "LearningPath",
       "target": "GuideShelf",
       "label": "起点章节"
+    },
+    {
+      "source": "Intel",
+      "target": "Digest_20261014",
+      "label": "今日"
     }
   ]
 }

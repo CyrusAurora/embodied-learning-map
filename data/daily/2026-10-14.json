@@ -46,5 +46,54 @@
       "cardHtml": "https://drive.google.com/file/d/1WaHtykavhm8AtC-k_R1_Lv3XNPj0qFv1/view?usp=drivesdk",
       "cardPng": "https://drive.google.com/file/d/19p9zX3BF_tz8AdrfBWJaCyL6AJfX-8KG/view?usp=drivesdk"
     }
+  },
+  "digest": {
+    "source": "AIHOT",
+    "dailyUrl": "https://aihot.news/daily/2026-10-14",
+    "general": [
+      {
+        "title": "Google 发布 Gemini 4 Argon：面向复杂工程与科研任务的前沿模型",
+        "url": "https://aihot.news/items/smxxtw5ca2c9jscojk4ppe5hf"
+      },
+      {
+        "title": "Gemini 4 Argon 正式 GA，智能指数追平 GPT-6 Astra，Cost per Task 仅为 60%",
+        "url": "https://aihot.news/items/w2fkb8pssvuc0mtttxnufchc9"
+      },
+      {
+        "title": "Meta Muse Wonder (Max) 进入 Arena 榜单：WebDev 第15、文本第2",
+        "url": "https://aihot.news/items/ob6ryetyialrnqhyjusr2s1iz"
+      },
+      {
+        "title": "Character.AI 成立五年后申请 Chapter 11 破产，部分资产以 2000 万美元出售给 Disney",
+        "url": "https://aihot.news/items/vwu0li2nl5hztqeztnq8b5udc"
+      },
+      {
+        "title": "Prime Intellect 收购 Moondream，联合创始人加入主导推理与多模态",
+        "url": "https://aihot.news/items/rruqd7cz78jq6l889kjp56jlz"
+      },
+      {
+        "title": "Liquid AI 发布 LFM2.5-24B-A2B 端侧推理模型",
+        "url": "https://aihot.news/items/j0hjfg7ioz2gs0s8msqnafpjj"
+      }
+    ],
+    "embodied": [
+      {
+        "title": "Google 发布 Gemini 4 Argon 具身推理模型，ERQA 基准得分 87%（未进精选）",
+        "url": "https://aihot.news/items/vawcjmwqshdh3pyewxyhc1mv2"
+      },
+      {
+        "title": "Physical Intelligence 发布 Pi API beta 版并向更多团队开放（未进精选）",
+        "url": "https://aihot.news/items/k2vhnbcayj1q6ij6a4qkuatui"
+      },
+      {
+        "title": "Dyna Robotics 联合创始人 Jason Ma 深谈 Dyna-2 world-action 模型与小时级自主机器人（未进精选）",
+        "url": "https://aihot.news/items/gglj5qab0zuuwyjxomay5hppr"
+      },
+      {
+        "title": "蚂蚁 inclusionAI 发布 BiDex-100 双臂灵巧操作基准（未进精选）",
+        "url": "https://aihot.news/items/vxpna50cveggwwsomy4awl41m"
+      }
+    ],
+    "xUsed": false
   }
 }
