@@ -884,6 +884,14 @@
       "status": "pushed",
       "desc": "描述对象：入门条件——仿真、真机、GPU 三类资源各准备到什么程度能走到哪一步（Guide §1.4 第 2、3 问）",
       "plain": "仿真+公开数据集够走完从入门到发论文（§2 纯仿真，RoboTwin 2.0 开源 10 万+轨迹）；真机放第二步，暴露标定误差、延迟、接触不确定性，低成本入口 LeRobot SO-101 主从臂；训 ACT/Diffusion Policy 16GB 够（§2 约 12GB）；微调 π0/GR00T 通常 40GB+ 或 LoRA；只推理要求低得多。"
+    },
+    {
+      "id": "Digest_20261015",
+      "label": "Digest 10-15",
+      "group": "digest",
+      "status": "pushed",
+      "desc": "AIHOT 晨间情报（未耗 X；具身 5 条均未进精选；AA-Robotics v0.1 为重点）",
+      "detail": "## Morning digest 2026-10-15（AIHOT；未耗 X）\n\nDaily main: Gemini 4 Argon 向全球 Google AI Pro 和 Ultra 订阅者开放\n\nFull daily: https://aihot.news/daily/2026-10-15\n\n### General AI\n1. [Gemini 4 Argon 向全球 Google AI Pro 和 Ultra 订阅者开放](https://aihot.news/items/rraljkr6dlbt4wabpcogmdlfv)\n2. [xAI 发布 Grok Voice 3.0，Artificial Analysis 语音榜 86.9 分第一](https://aihot.news/items/qld0z3p2gztpolbmviizsm66u)\n3. [欧盟就模型越狱事件调查 OpenAI 和 Anthropic，最高可罚全球营业额 3%](https://aihot.news/items/yq46ddqwq7ns4ilpaqh6k0kql)\n4. [美国 8 州起诉 OpenAI，指控 ChatGPT 指导青少年自伤或伤害他人](https://aihot.news/items/v5sbitu4hw1bozz0nlopcl3t8)\n5. [Modal 年化收入破 10 亿美元，完成 7.5 亿美元 D 轮](https://aihot.news/items/x5umoaa0xhd8n76uysjppz2fa)\n6. [OpenAI 团队分享用 GPT-6 系列 + Codex 维护大型代码库](https://aihot.news/items/wn2lwzshkg8gt2sbjuj1qxd8y)\n\n### Embodied\n1. [Artificial Analysis 发布 AA-Robotics v0.1：前沿 LLM 直接控 6 轴机械臂，GPT-6 Astra 69.4 分居首（未进精选）](https://aihot.news/items/lbse6u7brlz3do77ppbqjrsmj)\n2. [Google 用 Gemini 4 Argon 教 Apptronik Apollo 人形机器人玩沙包投掷，连中 7 球（官方 Demo，未进精选）](https://aihot.news/items/cukhd21yymcj4h0u2w6h7xrhe)\n3. [DeepSeek 拟领投机器人 AI 初创 Winverse AI 种子轮，投后估值约 4 亿美元（未定案，未进精选）](https://aihot.news/items/vtorugxp1w694jkzvdnnd59ue)\n4. [张小珺 3 小时访谈 Dyna Robotics 创始人 Lindon Gao：Product-research 路线 vs Pi（未进精选）](https://aihot.news/items/ylsvr03ay1tlpg1o7yjy3k0ra)\n5. [404 Media：德国科隆街头骚扰事件涉事机器人是市售 Unitree R1（未进精选）](https://aihot.news/items/i1zqe354ygkiqdjpg746jo9vz)\n\nAA-Robotics 关键数字（原文核对）：Astra 69.4 / Sol 64.6 / Argon 55.3 / Opus 5.5 48.8 / Fable 5.1 46.3；约 30 分钟一题 vs 人类 20 秒；Astra $16.36/题，Sol $1.93/题；zero-shot。"
     }
   ],
   "links": [
@@ -1116,6 +1124,11 @@
       "source": "A1",
       "target": "EntryBar",
       "label": "10-15"
+    },
+    {
+      "source": "Intel",
+      "target": "Digest_20261015",
+      "label": "今日"
     }
   ]
 }
