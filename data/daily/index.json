@@ -1,6 +1,11 @@
 {
   "dates": [
     {
+      "date": "2026-10-15",
+      "file": "2026-10-15.json",
+      "label": "A1 换角度：Guide §1.4 没真机没显卡能做到哪一步"
+    },
+    {
       "date": "2026-10-14",
       "file": "2026-10-14.json",
       "label": "A1 换角度：Guide §1.2 按背景选起点 + AIHOT digest"

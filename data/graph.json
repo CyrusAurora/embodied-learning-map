@@ -876,6 +876,14 @@
         "daily": "https://aihot.news/daily/2026-10-14",
         "xUsed": false
       }
+    },
+    {
+      "id": "EntryBar",
+      "label": "没真机没显卡能做到哪",
+      "group": "concept",
+      "status": "pushed",
+      "desc": "描述对象：入门条件——仿真、真机、GPU 三类资源各准备到什么程度能走到哪一步（Guide §1.4 第 2、3 问）",
+      "plain": "仿真+公开数据集够走完从入门到发论文（§2 纯仿真，RoboTwin 2.0 开源 10 万+轨迹）；真机放第二步，暴露标定误差、延迟、接触不确定性，低成本入口 LeRobot SO-101 主从臂；训 ACT/Diffusion Policy 16GB 够（§2 约 12GB）；微调 π0/GR00T 通常 40GB+ 或 LoRA；只推理要求低得多。"
     }
   ],
   "links": [
@@ -1093,6 +1101,21 @@
       "source": "Intel",
       "target": "Digest_20261014",
       "label": "今日"
+    },
+    {
+      "source": "EntryBar",
+      "target": "NotConverged",
+      "label": "同属 §1.4"
+    },
+    {
+      "source": "EntryBar",
+      "target": "F_HandsOn",
+      "label": "§2 上云的依据"
+    },
+    {
+      "source": "A1",
+      "target": "EntryBar",
+      "label": "10-15"
     }
   ]
 }

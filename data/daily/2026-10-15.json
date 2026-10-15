@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-15",
+  "learning": {
+    "id": "A1",
+    "status": "learning",
+    "note": "9/24起连续无验收（至10/14已14个工作日；今日第15次推送）。同阶段换角度：Guide §1.4 第2、3问（没真机能否做／需要什么显卡）五档门槛；验收降到回一个字母；附「停／继续」二选一；不进 A2",
+    "goal": "说得出做具身智能分几档门槛（仿真、真机、训练、推理），每档要什么设备，并能判断 Mac + 云端安排落在哪一档。",
+    "points": [
+      {
+        "term": "仿真 + 公开数据集",
+        "plain": "描述对象：入门条件。足以支撑从入门到发论文；§2 全程仿真，RoboTwin 2.0 开源 10 万+预采集轨迹，可跳过采数据。"
+      },
+      {
+        "term": "真机（Sim2Real Gap）",
+        "plain": "放第二步；暴露标定误差、延迟、接触不确定性。最低成本入口：LeRobot 生态 SO-101 主从臂。"
+      },
+      {
+        "term": "训练轻量策略（ACT、Diffusion Policy）",
+        "plain": "16GB 显存够用，§2 教程约 12GB。"
+      },
+      {
+        "term": "微调 VLA 基座（π0、GR00T）",
+        "plain": "通常 40GB 以上，或用 LoRA 等参数高效方法压显存。"
+      },
+      {
+        "term": "只做推理部署",
+        "plain": "显卡要求低得多，部分模型可在消费级显卡运行。"
+      }
+    ],
+    "links": [
+      {
+        "title": "Embodied-AI-Guide §1 Start From Here（展开 §1.4 第 2、3 问）",
+        "url": "https://github.com/TianxingChen/Embodied-AI-Guide#start"
+      },
+      {
+        "title": "LeRobot（Guide §1.4 点名的低成本真机入口）",
+        "url": "https://github.com/huggingface/lerobot"
+      },
+      {
+        "title": "选看｜RoboTwin 2.0 主页（Guide §2 纯仿真平台）",
+        "url": "https://robotwin-platform.github.io/"
+      }
+    ],
+    "drive": {
+      "recommend": "https://drive.google.com/file/d/1Tbf2pvH4cn3jZQlD6eT8pLCgv-nO1NmC/view?usp=drivesdk",
+      "cardHtml": "https://drive.google.com/file/d/1pNEbxyuJ5bJjj1UEv-An9zGwCGft_2ke/view?usp=drivesdk",
+      "cardPng": "https://drive.google.com/file/d/1Vu0Ks5BS2PVPpNBKk0VAqY1TY00mlFGs/view?usp=drivesdk"
+    }
+  }
+}
