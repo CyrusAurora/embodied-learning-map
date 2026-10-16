@@ -46,5 +46,64 @@
       "cardHtml": "https://drive.google.com/file/d/1cwDfN67aL1qnNz8JdUydnndXgJmylz-b/view?usp=drivesdk",
       "cardPng": "https://drive.google.com/file/d/1TcDLH5GKm58nt8NyeHCglwXVokzGEAbL/view?usp=drivesdk"
     }
+  },
+  "digest": {
+    "source": "AIHOT",
+    "dailyUrl": "https://aihot.news/daily/2026-10-16",
+    "general": [
+      {
+        "title": "Meta 发布开源权重模型 Muse Spark Open，816B 参数、1M 上下文",
+        "url": "https://aihot.news/items/s80tw5g2v22j1se4bmqejyaq4"
+      },
+      {
+        "title": "Anthropic Q3营收达168亿美元但增速放缓，11月IPO前估值预期或下调",
+        "url": "https://aihot.news/items/allv4n9g9lhfy72m1pg725apv"
+      },
+      {
+        "title": "Claude Opus 5.5 fast mode 结束研究预览并移除等待名单",
+        "url": "https://aihot.news/items/e2ssy0a7scpnel6ppyl3r9f2t"
+      },
+      {
+        "title": "ChatGPT 为 Chrome 用户新增标签页读取与控制能力",
+        "url": "https://aihot.news/items/bme0mytjnlk0d2lk8hf7srzoh"
+      },
+      {
+        "title": "Microsoft AI 公布 MAI-Base-2 预训练细节（2.8T MoE）",
+        "url": "https://aihot.news/items/f7ey01hbckuivmlgen9jq0vaf"
+      },
+      {
+        "title": "NVIDIA 发布开源 Nemotron 3.5 Super VL 及 Bolt 两款端侧模型",
+        "url": "https://aihot.news/items/l9jgzg24ei3a7m8xu1xfhy9n7"
+      }
+    ],
+    "embodied": [
+      {
+        "title": "Google 演示 Gemini 4 Argon 的机器人全流程：一张照片生成 4,500+ 仿真 episode，真机成功率 56% 升到 75%（未进精选）",
+        "url": "https://aihot.news/items/ywdktjet2i0juj4fgoy8ld7vz"
+      },
+      {
+        "title": "综述 Who Improves the Robot? Physical RSI 的 L0–L5 分级，现有工作均未达标（未进精选）",
+        "url": "https://aihot.news/items/jwrv9r0a88yvz76b2rga2oyaj"
+      },
+      {
+        "title": "蚂蚁灵波 LingBot 签下工业上下料、汽车制造、包裹分拣三家合作（未进精选）",
+        "url": "https://aihot.news/items/uf7nq63i4xzi0wth4vzlz3cef"
+      },
+      {
+        "title": "The Verge 实测 Eiliko 机器人玩具：68,000 台设备数据可被访问并可远程劫持",
+        "url": "https://aihot.news/items/pd501xipe38ooxo1t7jn7hphn"
+      }
+    ],
+    "originals": [
+      {
+        "title": "arXiv 2610.18842 Physical RSI 综述原文",
+        "url": "https://arxiv.org/abs/2610.18842"
+      },
+      {
+        "title": "The Decoder：Gemini 4 Argon 机器人全流程原文",
+        "url": "https://the-decoder.com/google-wants-gemini-4-argon-to-be-the-only-ai-model-robots-need/"
+      }
+    ],
+    "xUsed": false
   }
 }
