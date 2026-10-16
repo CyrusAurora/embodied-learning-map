@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-16",
+  "learning": {
+    "id": "A1",
+    "status": "learning",
+    "note": "9/24起连续无验收（至10/15已15个工作日；今日第16次推送）。同阶段换角度：Guide §1.4 第1问（前置基础）+ 控制篇(1.0)四档；验收降到回一个字母；附「停／继续」二选一；不进 A2",
+    "goal": "说得出入门前置只要三样（Python、深度学习基本概念、Linux 装环境），并能按自己的目标在控制四档里认一行：先过第 1 行、卡住再回头补。",
+    "points": [
+      {
+        "term": "前置三样",
+        "plain": "描述对象：入门前置条件。会用 Python；了解深度学习基本概念（会训练一个分类网络即可）；能在 Linux 上装环境。机器人学与控制论不是前置，按需补。"
+      },
+      {
+        "term": "第1档：训 VLA／操作策略、厂商 SDK",
+        "plain": "知道 FK/IK、关节空间 vs 末端空间、阻抗控制为何比位置控制安全；约一周够用。新人建议先过这一行。"
+      },
+      {
+        "term": "第2档：搭真机、调臂、力控",
+        "plain": "再加 PID、坐标变换、手眼标定、实时性与延迟；约一个月边调边学。"
+      },
+      {
+        "term": "第3档：人形／四足、全身控制",
+        "plain": "再加刚体动力学、旋量、最优控制(LQR/MPC)、接触与摩擦；三个月以上。"
+      },
+      {
+        "term": "第4档：移动导航与 SLAM",
+        "plain": "再加状态估计、EKF、图优化与 SLAM；两个月以上。"
+      }
+    ],
+    "links": [
+      {
+        "title": "Embodied-AI-Guide §1 Start From Here（展开 §1.4 第 1 问）",
+        "url": "https://github.com/TianxingChen/Embodied-AI-Guide#start"
+      },
+      {
+        "title": "控制篇 (1.0)「要学到什么程度」表",
+        "url": "https://github.com/TianxingChen/Embodied-AI-Guide/blob/main/topics/control.md"
+      },
+      {
+        "title": "选看｜Modern Robotics（控制篇点名的入门课）",
+        "url": "https://www.bilibili.com/video/BV1GJ411k7fE"
+      }
+    ],
+    "drive": {
+      "recommend": "https://drive.google.com/file/d/1lxygcYHlhwvlQrf5ITWHMZz0T8kF-CoQ/view?usp=drivesdk",
+      "cardHtml": "https://drive.google.com/file/d/1cwDfN67aL1qnNz8JdUydnndXgJmylz-b/view?usp=drivesdk",
+      "cardPng": "https://drive.google.com/file/d/1TcDLH5GKm58nt8NyeHCglwXVokzGEAbL/view?usp=drivesdk"
+    }
+  }
+}

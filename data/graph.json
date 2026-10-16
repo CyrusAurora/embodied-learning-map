@@ -26,9 +26,10 @@
       "label": "A1 认知：Guide 主线三问 + 董云龙四块",
       "group": "day",
       "status": "learning",
-      "desc": "§1+§3 + 董云龙基础技术路线（10-12 §1.1 书架；10-13 §3 六类信息源；10-14 §1.2 按背景选起点；连续多个工作日无验收）",
+      "desc": "§1+§3 + 董云龙基础技术路线（10-12 §1.1 书架；10-13 §3 六类信息源；10-14 §1.2 按背景选起点；连续多个工作日无验收；10-16 §1.4 前置基础+控制四档）",
       "goal": "说出 Guide 主线三问（数据从哪来、动作怎么表示、做得好不好怎么衡量），并把董云龙四块挂到三问上。",
       "points": [
+        "§1.4 前置三样：Python｜深度学习基本概念（训分类网络）｜Linux 装环境；控制按目标分四档按需补（10-16）",
         "§1.2 按背景选起点：行业与选题→§3；CV基础→§4 Robot Learning/VLA；机器人学→§3→§4；硬件→§7→§6→§2；新手→§2",
         "Guide 主线三问：数据从哪来｜动作怎么表示｜做得好不好怎么衡量（对象＝Policy 生命周期）",
         "未收敛三层：数据｜评测｜本体；2026 瓶颈从模型架构转向数据配方与评测协议（Guide §1.4）",
@@ -892,6 +893,14 @@
       "status": "pushed",
       "desc": "AIHOT 晨间情报（未耗 X；具身 5 条均未进精选；AA-Robotics v0.1 为重点）",
       "detail": "## Morning digest 2026-10-15（AIHOT；未耗 X）\n\nDaily main: Gemini 4 Argon 向全球 Google AI Pro 和 Ultra 订阅者开放\n\nFull daily: https://aihot.news/daily/2026-10-15\n\n### General AI\n1. [Gemini 4 Argon 向全球 Google AI Pro 和 Ultra 订阅者开放](https://aihot.news/items/rraljkr6dlbt4wabpcogmdlfv)\n2. [xAI 发布 Grok Voice 3.0，Artificial Analysis 语音榜 86.9 分第一](https://aihot.news/items/qld0z3p2gztpolbmviizsm66u)\n3. [欧盟就模型越狱事件调查 OpenAI 和 Anthropic，最高可罚全球营业额 3%](https://aihot.news/items/yq46ddqwq7ns4ilpaqh6k0kql)\n4. [美国 8 州起诉 OpenAI，指控 ChatGPT 指导青少年自伤或伤害他人](https://aihot.news/items/v5sbitu4hw1bozz0nlopcl3t8)\n5. [Modal 年化收入破 10 亿美元，完成 7.5 亿美元 D 轮](https://aihot.news/items/x5umoaa0xhd8n76uysjppz2fa)\n6. [OpenAI 团队分享用 GPT-6 系列 + Codex 维护大型代码库](https://aihot.news/items/wn2lwzshkg8gt2sbjuj1qxd8y)\n\n### Embodied\n1. [Artificial Analysis 发布 AA-Robotics v0.1：前沿 LLM 直接控 6 轴机械臂，GPT-6 Astra 69.4 分居首（未进精选）](https://aihot.news/items/lbse6u7brlz3do77ppbqjrsmj)\n2. [Google 用 Gemini 4 Argon 教 Apptronik Apollo 人形机器人玩沙包投掷，连中 7 球（官方 Demo，未进精选）](https://aihot.news/items/cukhd21yymcj4h0u2w6h7xrhe)\n3. [DeepSeek 拟领投机器人 AI 初创 Winverse AI 种子轮，投后估值约 4 亿美元（未定案，未进精选）](https://aihot.news/items/vtorugxp1w694jkzvdnnd59ue)\n4. [张小珺 3 小时访谈 Dyna Robotics 创始人 Lindon Gao：Product-research 路线 vs Pi（未进精选）](https://aihot.news/items/ylsvr03ay1tlpg1o7yjy3k0ra)\n5. [404 Media：德国科隆街头骚扰事件涉事机器人是市售 Unitree R1（未进精选）](https://aihot.news/items/i1zqe354ygkiqdjpg746jo9vz)\n\nAA-Robotics 关键数字（原文核对）：Astra 69.4 / Sol 64.6 / Argon 55.3 / Opus 5.5 48.8 / Fable 5.1 46.3；约 30 分钟一题 vs 人类 20 秒；Astra $16.36/题，Sol $1.93/题；zero-shot。"
+    },
+    {
+      "id": "PrereqDepth",
+      "label": "前置基础要到哪一步",
+      "group": "concept",
+      "status": "pushed",
+      "desc": "描述对象：入门前置条件——一个人开始学具身智能前技能栈要准备到什么程度；以及控制论／机器人学该补到哪一层（按目标分档）（Guide §1.4 第 1 问 + 控制篇 (1.0)）",
+      "plain": "前置三样：Python、深度学习基本概念（会训分类网络）、Linux 装环境；机器人学与控制论按需补。四档：①训 VLA／操作策略+厂商 SDK→FK/IK、关节 vs 末端、阻抗控制，约一周；②搭真机调臂力控→PID、坐标变换、手眼标定、实时性，约一个月；③人形／四足全身控制→刚体动力学、旋量、LQR/MPC、接触摩擦，三个月+；④移动导航→状态估计、EKF、图优化与 SLAM，两个月+。新人先过第 1 行，卡住再回头。"
     }
   ],
   "links": [
@@ -1129,6 +1138,26 @@
       "source": "Intel",
       "target": "Digest_20261015",
       "label": "今日"
+    },
+    {
+      "source": "A1",
+      "target": "PrereqDepth",
+      "label": "10-16"
+    },
+    {
+      "source": "PrereqDepth",
+      "target": "EntryBar",
+      "label": "同属 §1.4"
+    },
+    {
+      "source": "PrereqDepth",
+      "target": "D_Control",
+      "label": "控制按需补／parked 到 D"
+    },
+    {
+      "source": "PrereqDepth",
+      "target": "F_HandsOn",
+      "label": "先过第1行再 §2"
     }
   ]
 }
